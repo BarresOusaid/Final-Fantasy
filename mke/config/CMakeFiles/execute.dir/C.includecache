@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/Documents/mke/src/fonctions.c
+fonctions.h
+/home/user/Documents/mke/src/fonctions.h
+
+/home/user/Documents/mke/src/fonctions.h
+stdio.h
+/home/user/Documents/mke/src/stdio.h
+stdlib.h
+/home/user/Documents/mke/src/stdlib.h
+
+/home/user/Documents/mke/src/main.c
+fonctions.h
+/home/user/Documents/mke/src/fonctions.h
+

@@ -1,0 +1,1 @@
+/usr/bin/gcc  -O3 -DNDEBUG    CMakeFiles/execute.dir/home/user/Documents/mke/src/main.c.o CMakeFiles/execute.dir/home/user/Documents/mke/src/fonctions.c.o  -o /home/user/Documents/mke/build/Release/execute -rdynamic 
