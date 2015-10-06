@@ -1,1 +1,0 @@
-/usr/bin/gcc      CMakeFiles/execute.dir/home/user/Documents/github/Final-Fantasy/mke/src/main.c.o CMakeFiles/execute.dir/home/user/Documents/github/Final-Fantasy/mke/src/fonctions.c.o  -o /home/user/Documents/github/Final-Fantasy/mke/mke/build/execute -rdynamic 
