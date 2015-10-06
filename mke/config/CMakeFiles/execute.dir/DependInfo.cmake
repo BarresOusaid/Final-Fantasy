@@ -4,8 +4,8 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/home/user/Documents/mke/src/fonctions.c" "/home/user/Documents/mke/config/CMakeFiles/execute.dir/home/user/Documents/mke/src/fonctions.c.o"
-  "/home/user/Documents/mke/src/main.c" "/home/user/Documents/mke/config/CMakeFiles/execute.dir/home/user/Documents/mke/src/main.c.o"
+  "/home/user/Documents/github/Final-Fantasy/mke/src/fonctions.c" "/home/user/Documents/github/Final-Fantasy/mke/config/CMakeFiles/execute.dir/home/user/Documents/github/Final-Fantasy/mke/src/fonctions.c.o"
+  "/home/user/Documents/github/Final-Fantasy/mke/src/main.c" "/home/user/Documents/github/Final-Fantasy/mke/config/CMakeFiles/execute.dir/home/user/Documents/github/Final-Fantasy/mke/src/main.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 

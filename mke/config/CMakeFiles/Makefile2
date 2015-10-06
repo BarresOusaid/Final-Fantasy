@@ -44,10 +44,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/Documents/mke/config
+CMAKE_SOURCE_DIR = /home/user/Documents/github/Final-Fantasy/mke/config
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/Documents/mke/config
+CMAKE_BINARY_DIR = /home/user/Documents/github/Final-Fantasy/mke/config
 
 #=============================================================================
 # Target rules for target CMakeFiles/execute.dir
@@ -56,7 +56,7 @@ CMAKE_BINARY_DIR = /home/user/Documents/mke/config
 CMakeFiles/execute.dir/all:
 	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/depend
 	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/user/Documents/mke/config/CMakeFiles  1 2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/user/Documents/github/Final-Fantasy/mke/config/CMakeFiles  1 2
 	@echo "Built target execute"
 .PHONY : CMakeFiles/execute.dir/all
 
@@ -66,9 +66,9 @@ all: CMakeFiles/execute.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/execute.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Documents/mke/config/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Documents/github/Final-Fantasy/mke/config/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/execute.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Documents/mke/config/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Documents/github/Final-Fantasy/mke/config/CMakeFiles 0
 .PHONY : CMakeFiles/execute.dir/rule
 
 # Convenience name for target.
