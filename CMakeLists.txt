@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 2.8)
 
 project(Final_Mystic_quest)
 
-set (EXECUTABLE_OUTPUT_PATH ../mke/build/${CMAKE_BUILD_TYPE})
+set (EXECUTABLE_OUTPUT_PATH ../bin/${CMAKE_BUILD_TYPE})
 
 #Génération de la liste des fichiers sources
 
@@ -13,7 +13,7 @@ set (EXECUTABLE_OUTPUT_PATH ../mke/build/${CMAKE_BUILD_TYPE})
 file(
 	GLOB_RECURSE
 	source_files
-	../src/*
+	src/*
 )
 
 #Déclaration de l’éxecutable
