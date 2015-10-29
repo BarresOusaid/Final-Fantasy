@@ -18,10 +18,15 @@ file(
 
 #Déclaration de l’éxecutable
 
+find_package(SFML 2 COMPONENTS system window graphics audio REQUIRED)
+include_directories(${SFML_INCLUDE_DIR})
+
 add_executable(
 
 	execute
 
 	${source_files}
 
-)
+) 
+
+target_link_libraries(execute ${SFML_LIBRARIES})
