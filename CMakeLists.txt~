@@ -29,4 +29,4 @@ add_executable(
 
 ) 
 
-target_link_libraries(myapp ${SFML_LIBRARIES})
+target_link_libraries(execute ${SFML_LIBRARIES})

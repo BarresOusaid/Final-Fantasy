@@ -18,6 +18,11 @@ file(
 
 #Déclaration de l’éxecutable
 
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
+set(SFML_ROOT "/usr/lsa")
+set(CMAKE_MODULE_PATH "${SFML_ROOT}/share/SFML/cmake/Modules"
+${CMAKE_MODULE_PATH})
+
 find_package(SFML 2 COMPONENTS system window graphics audio REQUIRED)
 include_directories(${SFML_INCLUDE_DIR})
 
