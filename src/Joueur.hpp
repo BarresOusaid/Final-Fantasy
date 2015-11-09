@@ -25,13 +25,16 @@ class Joueur : public Personne {
 			int const getExperience();
 			Butin* const getButin();
 
+			Element* clone() const;
+
+			TypeId::TypeId getTypedId();
+
 			void setExperience(int);
 			void setButin(Butin*);
 
 			//Methode pour la classe Joueur
 
 			bool const isJoueur();
-
 };
 
 

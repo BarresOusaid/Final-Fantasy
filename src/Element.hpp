@@ -12,7 +12,7 @@ class Element{
  protected:
  		int x; 
  		int y;
- 		Direction::Direction  orientation;
+ 		DIRECTION::DIRECTION  orientation;
 
  public:
  		//constructeur et destructeur
@@ -22,17 +22,17 @@ class Element{
  		//getter des attributs
  		int const getX();
  		int const getY();
- 		Direction::Direction const getOrientation();
+ 		DIRECTION::DIRECTION const getOrientation();
 
  		//setter des attributs
  		void setX(int);
  		void setY(int);
- 		void setOrientation(Direction::Direction);
+ 		void setOrientation(DIRECTION::DIRECTION);
 
  		//methodes utiles 
 
  		virtual TypeId::TypeId getTypedId()=0;
  		virtual bool isStatic()=0;
- 		//virtual Element* const clone()=0;
+ 		virtual Element* clone() const =0;
  };
  #endif

@@ -37,3 +37,7 @@
 			return false;
 		}
 
+		Element* Objet::clone() const{
+			return new Objet(*this);
+		}
+

@@ -24,7 +24,6 @@ class Personne : public Element{
 
  	//refefinition des methodes de la classe mere Element
  		bool isStatic();
- 		//virtual Element* const clone();
 
  	//Définition des methodes propres a la classe joueur
 

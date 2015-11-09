@@ -4,11 +4,11 @@
 Element::Element(){
 	x=0;
 	y=0;
-	orientation=Direction::NONE;
+	orientation=DIRECTION::NONE;
 }
 
 Element::~Element(){
-	std::cout <<"Element detruit";
+	std::cout <<"Element detruit"<< std::endl;
 }
 
 //getter des attributs
@@ -20,7 +20,7 @@ Element::~Element(){
  		return y;
  	}
 
- 	Direction::Direction const Element::getOrientation(){
+ 	DIRECTION::DIRECTION const Element::getOrientation(){
  		return orientation;
  	}
 
@@ -31,6 +31,6 @@ Element::~Element(){
  	void Element::setY(int y){
  		this->y=y;
  	}
- 	void Element::setOrientation(Direction::Direction orientation){
+ 	void Element::setOrientation(DIRECTION::DIRECTION orientation){
  		this->orientation = orientation;
  	}

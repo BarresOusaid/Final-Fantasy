@@ -20,11 +20,7 @@ Personne::~Personne(){
 bool Personne::isStatic(){
 	return false;
 }
-/*
-virtual Element* const clone(){
-	return new Personne(*this);
-}
-*/
+
  bool Personne::isJoueur() const{
 	return true; 	
  }

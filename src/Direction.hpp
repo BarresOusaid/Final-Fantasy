@@ -2,11 +2,11 @@
 #define Direction_H
 
 #include <cstdlib>
-namespace Direction
+namespace DIRECTION
 {
      typedef enum
      {
-			NONE=0,haut=1,droite=2,bas=3,gauche=4
-     }Direction;
+			NONE=0, HAUT=1, DROITE=2, BAS=3, GAUCHE=4
+     }DIRECTION;
 }
  #endif

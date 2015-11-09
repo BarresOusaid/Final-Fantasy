@@ -30,7 +30,7 @@ class Objet : public Graphique{
 		TypeId::TypeId getTypedId();
 		bool isStatic();
 		bool franchir();
-
+		Element* clone() const;
 
 
 };

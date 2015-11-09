@@ -25,6 +25,10 @@
 					return this -> butin;
 			}
 
+			TypeId::TypeId Joueur::getTypedId(){
+				return TypeId::joueur;
+			}
+
 			void Joueur::setExperience(int experience){
 
 					this -> experience = experience;
@@ -32,6 +36,10 @@
 
 			void Joueur::setButin(Butin* butin){
 					this -> butin = butin;
+ 			}
+
+ 			Element* Joueur::clone() const{
+ 				return new Joueur(*this);
  			}
 
 			//Methode pour la classe Joueur

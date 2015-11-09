@@ -23,7 +23,6 @@ class Graphique : public Element{
  			//méthode 
  			virtual bool franchir()=0;
  			bool equals(const Element *e);
-
  };
  
   #endif
