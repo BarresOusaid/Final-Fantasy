@@ -34,11 +34,14 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/ccmake
+
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ous/Documents/github/Final-Fantasy
+CMAKE_SOURCE_DIR = /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ous/Documents/github/Final-Fantasy/build
+CMAKE_BINARY_DIR = /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/execute.dir/depend.make
@@ -51,17 +54,17 @@ include CMakeFiles/execute.dir/flags.make
 
 CMakeFiles/execute.dir/src/Butin.cpp.o: CMakeFiles/execute.dir/flags.make
 CMakeFiles/execute.dir/src/Butin.cpp.o: ../src/Butin.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Butin.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Butin.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/Butin.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Butin.cpp.o -c /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Butin.cpp
 
 CMakeFiles/execute.dir/src/Butin.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/execute.dir/src/Butin.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ous/Documents/github/Final-Fantasy/src/Butin.cpp > CMakeFiles/execute.dir/src/Butin.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Butin.cpp > CMakeFiles/execute.dir/src/Butin.cpp.i
 
 CMakeFiles/execute.dir/src/Butin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/execute.dir/src/Butin.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ous/Documents/github/Final-Fantasy/src/Butin.cpp -o CMakeFiles/execute.dir/src/Butin.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Butin.cpp -o CMakeFiles/execute.dir/src/Butin.cpp.s
 
 CMakeFiles/execute.dir/src/Butin.cpp.o.requires:
 .PHONY : CMakeFiles/execute.dir/src/Butin.cpp.o.requires
@@ -72,42 +75,19 @@ CMakeFiles/execute.dir/src/Butin.cpp.o.provides: CMakeFiles/execute.dir/src/Buti
 
 CMakeFiles/execute.dir/src/Butin.cpp.o.provides.build: CMakeFiles/execute.dir/src/Butin.cpp.o
 
-CMakeFiles/execute.dir/src/Entity.cpp.o: CMakeFiles/execute.dir/flags.make
-CMakeFiles/execute.dir/src/Entity.cpp.o: ../src/Entity.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Entity.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Entity.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/Entity.cpp
-
-CMakeFiles/execute.dir/src/Entity.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/execute.dir/src/Entity.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ous/Documents/github/Final-Fantasy/src/Entity.cpp > CMakeFiles/execute.dir/src/Entity.cpp.i
-
-CMakeFiles/execute.dir/src/Entity.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/execute.dir/src/Entity.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ous/Documents/github/Final-Fantasy/src/Entity.cpp -o CMakeFiles/execute.dir/src/Entity.cpp.s
-
-CMakeFiles/execute.dir/src/Entity.cpp.o.requires:
-.PHONY : CMakeFiles/execute.dir/src/Entity.cpp.o.requires
-
-CMakeFiles/execute.dir/src/Entity.cpp.o.provides: CMakeFiles/execute.dir/src/Entity.cpp.o.requires
-	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Entity.cpp.o.provides.build
-.PHONY : CMakeFiles/execute.dir/src/Entity.cpp.o.provides
-
-CMakeFiles/execute.dir/src/Entity.cpp.o.provides.build: CMakeFiles/execute.dir/src/Entity.cpp.o
-
 CMakeFiles/execute.dir/src/Objet.cpp.o: CMakeFiles/execute.dir/flags.make
 CMakeFiles/execute.dir/src/Objet.cpp.o: ../src/Objet.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Objet.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Objet.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/Objet.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Objet.cpp.o -c /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Objet.cpp
 
 CMakeFiles/execute.dir/src/Objet.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/execute.dir/src/Objet.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ous/Documents/github/Final-Fantasy/src/Objet.cpp > CMakeFiles/execute.dir/src/Objet.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Objet.cpp > CMakeFiles/execute.dir/src/Objet.cpp.i
 
 CMakeFiles/execute.dir/src/Objet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/execute.dir/src/Objet.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ous/Documents/github/Final-Fantasy/src/Objet.cpp -o CMakeFiles/execute.dir/src/Objet.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Objet.cpp -o CMakeFiles/execute.dir/src/Objet.cpp.s
 
 CMakeFiles/execute.dir/src/Objet.cpp.o.requires:
 .PHONY : CMakeFiles/execute.dir/src/Objet.cpp.o.requires
@@ -120,17 +100,17 @@ CMakeFiles/execute.dir/src/Objet.cpp.o.provides.build: CMakeFiles/execute.dir/sr
 
 CMakeFiles/execute.dir/src/Graphique.cpp.o: CMakeFiles/execute.dir/flags.make
 CMakeFiles/execute.dir/src/Graphique.cpp.o: ../src/Graphique.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Graphique.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Graphique.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/Graphique.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Graphique.cpp.o -c /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Graphique.cpp
 
 CMakeFiles/execute.dir/src/Graphique.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/execute.dir/src/Graphique.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ous/Documents/github/Final-Fantasy/src/Graphique.cpp > CMakeFiles/execute.dir/src/Graphique.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Graphique.cpp > CMakeFiles/execute.dir/src/Graphique.cpp.i
 
 CMakeFiles/execute.dir/src/Graphique.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/execute.dir/src/Graphique.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ous/Documents/github/Final-Fantasy/src/Graphique.cpp -o CMakeFiles/execute.dir/src/Graphique.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Graphique.cpp -o CMakeFiles/execute.dir/src/Graphique.cpp.s
 
 CMakeFiles/execute.dir/src/Graphique.cpp.o.requires:
 .PHONY : CMakeFiles/execute.dir/src/Graphique.cpp.o.requires
@@ -143,17 +123,17 @@ CMakeFiles/execute.dir/src/Graphique.cpp.o.provides.build: CMakeFiles/execute.di
 
 CMakeFiles/execute.dir/src/test.cpp.o: CMakeFiles/execute.dir/flags.make
 CMakeFiles/execute.dir/src/test.cpp.o: ../src/test.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/test.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/test.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/test.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/test.cpp.o -c /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/test.cpp
 
 CMakeFiles/execute.dir/src/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/execute.dir/src/test.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ous/Documents/github/Final-Fantasy/src/test.cpp > CMakeFiles/execute.dir/src/test.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/test.cpp > CMakeFiles/execute.dir/src/test.cpp.i
 
 CMakeFiles/execute.dir/src/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/execute.dir/src/test.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ous/Documents/github/Final-Fantasy/src/test.cpp -o CMakeFiles/execute.dir/src/test.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/test.cpp -o CMakeFiles/execute.dir/src/test.cpp.s
 
 CMakeFiles/execute.dir/src/test.cpp.o.requires:
 .PHONY : CMakeFiles/execute.dir/src/test.cpp.o.requires
@@ -164,65 +144,65 @@ CMakeFiles/execute.dir/src/test.cpp.o.provides: CMakeFiles/execute.dir/src/test.
 
 CMakeFiles/execute.dir/src/test.cpp.o.provides.build: CMakeFiles/execute.dir/src/test.cpp.o
 
-CMakeFiles/execute.dir/src/Joueur.cpp.o: CMakeFiles/execute.dir/flags.make
-CMakeFiles/execute.dir/src/Joueur.cpp.o: ../src/Joueur.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Joueur.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Joueur.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/Joueur.cpp
+CMakeFiles/execute.dir/src/Player.cpp.o: CMakeFiles/execute.dir/flags.make
+CMakeFiles/execute.dir/src/Player.cpp.o: ../src/Player.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Player.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Player.cpp.o -c /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Player.cpp
 
-CMakeFiles/execute.dir/src/Joueur.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/execute.dir/src/Joueur.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ous/Documents/github/Final-Fantasy/src/Joueur.cpp > CMakeFiles/execute.dir/src/Joueur.cpp.i
+CMakeFiles/execute.dir/src/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/execute.dir/src/Player.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Player.cpp > CMakeFiles/execute.dir/src/Player.cpp.i
 
-CMakeFiles/execute.dir/src/Joueur.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/execute.dir/src/Joueur.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ous/Documents/github/Final-Fantasy/src/Joueur.cpp -o CMakeFiles/execute.dir/src/Joueur.cpp.s
+CMakeFiles/execute.dir/src/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/execute.dir/src/Player.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Player.cpp -o CMakeFiles/execute.dir/src/Player.cpp.s
 
-CMakeFiles/execute.dir/src/Joueur.cpp.o.requires:
-.PHONY : CMakeFiles/execute.dir/src/Joueur.cpp.o.requires
+CMakeFiles/execute.dir/src/Player.cpp.o.requires:
+.PHONY : CMakeFiles/execute.dir/src/Player.cpp.o.requires
 
-CMakeFiles/execute.dir/src/Joueur.cpp.o.provides: CMakeFiles/execute.dir/src/Joueur.cpp.o.requires
-	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Joueur.cpp.o.provides.build
-.PHONY : CMakeFiles/execute.dir/src/Joueur.cpp.o.provides
+CMakeFiles/execute.dir/src/Player.cpp.o.provides: CMakeFiles/execute.dir/src/Player.cpp.o.requires
+	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Player.cpp.o.provides.build
+.PHONY : CMakeFiles/execute.dir/src/Player.cpp.o.provides
 
-CMakeFiles/execute.dir/src/Joueur.cpp.o.provides.build: CMakeFiles/execute.dir/src/Joueur.cpp.o
+CMakeFiles/execute.dir/src/Player.cpp.o.provides.build: CMakeFiles/execute.dir/src/Player.cpp.o
 
-CMakeFiles/execute.dir/src/Element.cpp.o: CMakeFiles/execute.dir/flags.make
-CMakeFiles/execute.dir/src/Element.cpp.o: ../src/Element.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_7)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Element.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Element.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/Element.cpp
+CMakeFiles/execute.dir/src/Entity.cpp.o: CMakeFiles/execute.dir/flags.make
+CMakeFiles/execute.dir/src/Entity.cpp.o: ../src/Entity.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Entity.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Entity.cpp.o -c /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Entity.cpp
 
-CMakeFiles/execute.dir/src/Element.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/execute.dir/src/Element.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ous/Documents/github/Final-Fantasy/src/Element.cpp > CMakeFiles/execute.dir/src/Element.cpp.i
+CMakeFiles/execute.dir/src/Entity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/execute.dir/src/Entity.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Entity.cpp > CMakeFiles/execute.dir/src/Entity.cpp.i
 
-CMakeFiles/execute.dir/src/Element.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/execute.dir/src/Element.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ous/Documents/github/Final-Fantasy/src/Element.cpp -o CMakeFiles/execute.dir/src/Element.cpp.s
+CMakeFiles/execute.dir/src/Entity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/execute.dir/src/Entity.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Entity.cpp -o CMakeFiles/execute.dir/src/Entity.cpp.s
 
-CMakeFiles/execute.dir/src/Element.cpp.o.requires:
-.PHONY : CMakeFiles/execute.dir/src/Element.cpp.o.requires
+CMakeFiles/execute.dir/src/Entity.cpp.o.requires:
+.PHONY : CMakeFiles/execute.dir/src/Entity.cpp.o.requires
 
-CMakeFiles/execute.dir/src/Element.cpp.o.provides: CMakeFiles/execute.dir/src/Element.cpp.o.requires
-	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Element.cpp.o.provides.build
-.PHONY : CMakeFiles/execute.dir/src/Element.cpp.o.provides
+CMakeFiles/execute.dir/src/Entity.cpp.o.provides: CMakeFiles/execute.dir/src/Entity.cpp.o.requires
+	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Entity.cpp.o.provides.build
+.PHONY : CMakeFiles/execute.dir/src/Entity.cpp.o.provides
 
-CMakeFiles/execute.dir/src/Element.cpp.o.provides.build: CMakeFiles/execute.dir/src/Element.cpp.o
+CMakeFiles/execute.dir/src/Entity.cpp.o.provides.build: CMakeFiles/execute.dir/src/Entity.cpp.o
 
 CMakeFiles/execute.dir/src/Personne.cpp.o: CMakeFiles/execute.dir/flags.make
 CMakeFiles/execute.dir/src/Personne.cpp.o: ../src/Personne.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Personne.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Personne.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/Personne.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Personne.cpp.o -c /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Personne.cpp
 
 CMakeFiles/execute.dir/src/Personne.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/execute.dir/src/Personne.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ous/Documents/github/Final-Fantasy/src/Personne.cpp > CMakeFiles/execute.dir/src/Personne.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Personne.cpp > CMakeFiles/execute.dir/src/Personne.cpp.i
 
 CMakeFiles/execute.dir/src/Personne.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/execute.dir/src/Personne.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ous/Documents/github/Final-Fantasy/src/Personne.cpp -o CMakeFiles/execute.dir/src/Personne.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Personne.cpp -o CMakeFiles/execute.dir/src/Personne.cpp.s
 
 CMakeFiles/execute.dir/src/Personne.cpp.o.requires:
 .PHONY : CMakeFiles/execute.dir/src/Personne.cpp.o.requires
@@ -235,17 +215,17 @@ CMakeFiles/execute.dir/src/Personne.cpp.o.provides.build: CMakeFiles/execute.dir
 
 CMakeFiles/execute.dir/src/Factory.cpp.o: CMakeFiles/execute.dir/flags.make
 CMakeFiles/execute.dir/src/Factory.cpp.o: ../src/Factory.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Factory.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Factory.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/Factory.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Factory.cpp.o -c /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Factory.cpp
 
 CMakeFiles/execute.dir/src/Factory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/execute.dir/src/Factory.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ous/Documents/github/Final-Fantasy/src/Factory.cpp > CMakeFiles/execute.dir/src/Factory.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Factory.cpp > CMakeFiles/execute.dir/src/Factory.cpp.i
 
 CMakeFiles/execute.dir/src/Factory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/execute.dir/src/Factory.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ous/Documents/github/Final-Fantasy/src/Factory.cpp -o CMakeFiles/execute.dir/src/Factory.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Factory.cpp -o CMakeFiles/execute.dir/src/Factory.cpp.s
 
 CMakeFiles/execute.dir/src/Factory.cpp.o.requires:
 .PHONY : CMakeFiles/execute.dir/src/Factory.cpp.o.requires
@@ -256,35 +236,83 @@ CMakeFiles/execute.dir/src/Factory.cpp.o.provides: CMakeFiles/execute.dir/src/Fa
 
 CMakeFiles/execute.dir/src/Factory.cpp.o.provides.build: CMakeFiles/execute.dir/src/Factory.cpp.o
 
+CMakeFiles/execute.dir/src/Joueur.cpp.o: CMakeFiles/execute.dir/flags.make
+CMakeFiles/execute.dir/src/Joueur.cpp.o: ../src/Joueur.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Joueur.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Joueur.cpp.o -c /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Joueur.cpp
+
+CMakeFiles/execute.dir/src/Joueur.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/execute.dir/src/Joueur.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Joueur.cpp > CMakeFiles/execute.dir/src/Joueur.cpp.i
+
+CMakeFiles/execute.dir/src/Joueur.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/execute.dir/src/Joueur.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Joueur.cpp -o CMakeFiles/execute.dir/src/Joueur.cpp.s
+
+CMakeFiles/execute.dir/src/Joueur.cpp.o.requires:
+.PHONY : CMakeFiles/execute.dir/src/Joueur.cpp.o.requires
+
+CMakeFiles/execute.dir/src/Joueur.cpp.o.provides: CMakeFiles/execute.dir/src/Joueur.cpp.o.requires
+	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Joueur.cpp.o.provides.build
+.PHONY : CMakeFiles/execute.dir/src/Joueur.cpp.o.provides
+
+CMakeFiles/execute.dir/src/Joueur.cpp.o.provides.build: CMakeFiles/execute.dir/src/Joueur.cpp.o
+
+CMakeFiles/execute.dir/src/Element.cpp.o: CMakeFiles/execute.dir/flags.make
+CMakeFiles/execute.dir/src/Element.cpp.o: ../src/Element.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Element.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Element.cpp.o -c /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Element.cpp
+
+CMakeFiles/execute.dir/src/Element.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/execute.dir/src/Element.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Element.cpp > CMakeFiles/execute.dir/src/Element.cpp.i
+
+CMakeFiles/execute.dir/src/Element.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/execute.dir/src/Element.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Element.cpp -o CMakeFiles/execute.dir/src/Element.cpp.s
+
+CMakeFiles/execute.dir/src/Element.cpp.o.requires:
+.PHONY : CMakeFiles/execute.dir/src/Element.cpp.o.requires
+
+CMakeFiles/execute.dir/src/Element.cpp.o.provides: CMakeFiles/execute.dir/src/Element.cpp.o.requires
+	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Element.cpp.o.provides.build
+.PHONY : CMakeFiles/execute.dir/src/Element.cpp.o.provides
+
+CMakeFiles/execute.dir/src/Element.cpp.o.provides.build: CMakeFiles/execute.dir/src/Element.cpp.o
+
 # Object files for target execute
 execute_OBJECTS = \
 "CMakeFiles/execute.dir/src/Butin.cpp.o" \
-"CMakeFiles/execute.dir/src/Entity.cpp.o" \
 "CMakeFiles/execute.dir/src/Objet.cpp.o" \
 "CMakeFiles/execute.dir/src/Graphique.cpp.o" \
 "CMakeFiles/execute.dir/src/test.cpp.o" \
-"CMakeFiles/execute.dir/src/Joueur.cpp.o" \
-"CMakeFiles/execute.dir/src/Element.cpp.o" \
+"CMakeFiles/execute.dir/src/Player.cpp.o" \
+"CMakeFiles/execute.dir/src/Entity.cpp.o" \
 "CMakeFiles/execute.dir/src/Personne.cpp.o" \
-"CMakeFiles/execute.dir/src/Factory.cpp.o"
+"CMakeFiles/execute.dir/src/Factory.cpp.o" \
+"CMakeFiles/execute.dir/src/Joueur.cpp.o" \
+"CMakeFiles/execute.dir/src/Element.cpp.o"
 
 # External object files for target execute
 execute_EXTERNAL_OBJECTS =
 
 ../bin/execute: CMakeFiles/execute.dir/src/Butin.cpp.o
-../bin/execute: CMakeFiles/execute.dir/src/Entity.cpp.o
 ../bin/execute: CMakeFiles/execute.dir/src/Objet.cpp.o
 ../bin/execute: CMakeFiles/execute.dir/src/Graphique.cpp.o
 ../bin/execute: CMakeFiles/execute.dir/src/test.cpp.o
-../bin/execute: CMakeFiles/execute.dir/src/Joueur.cpp.o
-../bin/execute: CMakeFiles/execute.dir/src/Element.cpp.o
+../bin/execute: CMakeFiles/execute.dir/src/Player.cpp.o
+../bin/execute: CMakeFiles/execute.dir/src/Entity.cpp.o
 ../bin/execute: CMakeFiles/execute.dir/src/Personne.cpp.o
 ../bin/execute: CMakeFiles/execute.dir/src/Factory.cpp.o
+../bin/execute: CMakeFiles/execute.dir/src/Joueur.cpp.o
+../bin/execute: CMakeFiles/execute.dir/src/Element.cpp.o
 ../bin/execute: CMakeFiles/execute.dir/build.make
-../bin/execute: /usr/local/lib/libsfml-system.so
-../bin/execute: /usr/local/lib/libsfml-window.so
-../bin/execute: /usr/local/lib/libsfml-graphics.so
-../bin/execute: /usr/local/lib/libsfml-audio.so
+../bin/execute: /usr/lsa/lib/libsfml-system.so
+../bin/execute: /usr/lsa/lib/libsfml-window.so
+../bin/execute: /usr/lsa/lib/libsfml-graphics.so
+../bin/execute: /usr/lsa/lib/libsfml-audio.so
 ../bin/execute: CMakeFiles/execute.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../bin/execute"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/execute.dir/link.txt --verbose=$(VERBOSE)
@@ -294,14 +322,15 @@ CMakeFiles/execute.dir/build: ../bin/execute
 .PHONY : CMakeFiles/execute.dir/build
 
 CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/Butin.cpp.o.requires
-CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/Entity.cpp.o.requires
 CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/Objet.cpp.o.requires
 CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/Graphique.cpp.o.requires
 CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/test.cpp.o.requires
-CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/Joueur.cpp.o.requires
-CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/Element.cpp.o.requires
+CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/Player.cpp.o.requires
+CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/Entity.cpp.o.requires
 CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/Personne.cpp.o.requires
 CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/Factory.cpp.o.requires
+CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/Joueur.cpp.o.requires
+CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/Element.cpp.o.requires
 .PHONY : CMakeFiles/execute.dir/requires
 
 CMakeFiles/execute.dir/clean:
@@ -309,6 +338,6 @@ CMakeFiles/execute.dir/clean:
 .PHONY : CMakeFiles/execute.dir/clean
 
 CMakeFiles/execute.dir/depend:
-	cd /home/ous/Documents/github/Final-Fantasy/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ous/Documents/github/Final-Fantasy /home/ous/Documents/github/Final-Fantasy /home/ous/Documents/github/Final-Fantasy/build /home/ous/Documents/github/Final-Fantasy/build /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles/execute.dir/DependInfo.cmake --color=$(COLOR)
+	cd /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles/execute.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/execute.dir/depend
 

@@ -5,9 +5,9 @@ Entity::Entity() {
     
     twenty.loadFromFile("../Final-Fantasy/Final-Mystic-Quest/Final-Mystic-Quest/Ferrum.ttf");
     
-    // tout les 
+    // tous les entités ont un niveau initiale à 5 
     attributes[LEVEL]=5;
-    for(int i = EXP; i < MDEF; i++)
+    for(int i = EXP; i < STATSCOUNT; i++)
     {
 		attributes[i] = 0;
 	}
@@ -26,7 +26,7 @@ Entity::~Entity(){
 
 void Entity::setAttributes(Stats s, int val) {
 	
-	if(s >= LEVEL && s <= MDEF)
+	if(s >= LEVEL && s <= STATSCOUNT)
 	{
 		attributes[val] = s;
 	}		
@@ -41,7 +41,7 @@ bool Entity::hasStatus(unsigned int status) {
 
 bool Entity::setStatus(unsigned int status) {
 	
-	// l'entité a déja une altération d'états
+	// l'entité a déja une altération d'état
 	if(hasStatus(status))
 	{
 		return 0 ;
@@ -70,4 +70,21 @@ void Entity::attack(int target) {
 	turn.action = ATTACK;
 	turn.target = target;
 	
+}
+	
+int Entity::getSpriteDim() { 
+	
+	return spriteDim; 
+
+}
+
+void Entity::setTurn(Turn t) {
+	
+	turn = t;
+}
+
+Entity::Turn Entity::getTurn() const {
+	
+	return turn;
+
 }

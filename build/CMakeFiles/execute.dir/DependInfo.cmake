@@ -4,15 +4,16 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ous/Documents/github/Final-Fantasy/src/Butin.cpp" "/home/ous/Documents/github/Final-Fantasy/build/CMakeFiles/execute.dir/src/Butin.cpp.o"
-  "/home/ous/Documents/github/Final-Fantasy/src/Element.cpp" "/home/ous/Documents/github/Final-Fantasy/build/CMakeFiles/execute.dir/src/Element.cpp.o"
-  "/home/ous/Documents/github/Final-Fantasy/src/Entity.cpp" "/home/ous/Documents/github/Final-Fantasy/build/CMakeFiles/execute.dir/src/Entity.cpp.o"
-  "/home/ous/Documents/github/Final-Fantasy/src/Factory.cpp" "/home/ous/Documents/github/Final-Fantasy/build/CMakeFiles/execute.dir/src/Factory.cpp.o"
-  "/home/ous/Documents/github/Final-Fantasy/src/Graphique.cpp" "/home/ous/Documents/github/Final-Fantasy/build/CMakeFiles/execute.dir/src/Graphique.cpp.o"
-  "/home/ous/Documents/github/Final-Fantasy/src/Joueur.cpp" "/home/ous/Documents/github/Final-Fantasy/build/CMakeFiles/execute.dir/src/Joueur.cpp.o"
-  "/home/ous/Documents/github/Final-Fantasy/src/Objet.cpp" "/home/ous/Documents/github/Final-Fantasy/build/CMakeFiles/execute.dir/src/Objet.cpp.o"
-  "/home/ous/Documents/github/Final-Fantasy/src/Personne.cpp" "/home/ous/Documents/github/Final-Fantasy/build/CMakeFiles/execute.dir/src/Personne.cpp.o"
-  "/home/ous/Documents/github/Final-Fantasy/src/test.cpp" "/home/ous/Documents/github/Final-Fantasy/build/CMakeFiles/execute.dir/src/test.cpp.o"
+  "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Butin.cpp" "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles/execute.dir/src/Butin.cpp.o"
+  "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Element.cpp" "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles/execute.dir/src/Element.cpp.o"
+  "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Entity.cpp" "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles/execute.dir/src/Entity.cpp.o"
+  "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Factory.cpp" "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles/execute.dir/src/Factory.cpp.o"
+  "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Graphique.cpp" "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles/execute.dir/src/Graphique.cpp.o"
+  "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Joueur.cpp" "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles/execute.dir/src/Joueur.cpp.o"
+  "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Objet.cpp" "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles/execute.dir/src/Objet.cpp.o"
+  "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Personne.cpp" "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles/execute.dir/src/Personne.cpp.o"
+  "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Player.cpp" "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles/execute.dir/src/Player.cpp.o"
+  "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/test.cpp" "/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles/execute.dir/src/test.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -22,7 +23,7 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/usr/local/include"
+  "/usr/lsa/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

@@ -12,7 +12,7 @@ public:
  		Entity();
         virtual ~Entity();
  		
-        // attributs de l'entité
+        // caractéristiques de l'entité
         enum Stats
         {
             LEVEL,
@@ -31,7 +31,8 @@ public:
             ACC,
             DEF,
             EVA,
-            MDEF
+            MDEF,
+            STATSCOUNT
         };
 
         // actions entity can take in battle
@@ -42,25 +43,27 @@ public:
             MAGIC,
             ITEM,
             FLEE,
-            DEFEND
+            DEFEND,
+            COUNT
         };
     
 
-          // Tour d'action
+        // Tour d'action
         struct Turn {
-            // actions à effectuées
-            Actions action;
+          
+			// actions à effectuées
+			Actions action;
         
-            // sélectionne la cible
-            int target;
+			// sélectionne la cible
+			int target;
         
-            // id de l'action (spellID/itemID)
-            int actionID;
+			// id de l'action (spellID/itemID)
+			int actionID;
         };
     
-    void setTurn(Turn t);
-    void resetTurn();
-    Turn getTurn() const;
+		void setTurn(Turn t);
+		void resetTurn();
+		Turn getTurn() const;
 
         // met en place un attributs
         void setAttributes(Stats s, int val);
@@ -106,7 +109,9 @@ public:
         // attaque la cible selectionnée au prochain tour
         void attack(int target);
 
-        protected:
+
+protected:
+
     // attributs de l'entité
     int attributes[17];
     
@@ -122,7 +127,9 @@ public:
     // bit altération d'états
     int statusBits;
 
+
 private:
+
     // nom de l'entité
     std::string name;
     
@@ -138,7 +145,7 @@ private:
     unsigned int textTicks;
     
     // couleur actuelle pour afficher le texte
-    enum textColors
+    enum TextColors
     {
         WHITE,
         RED,
@@ -148,8 +155,6 @@ private:
         PURPLE
     };
     int textColor;
-     
-
     
  };
  #endif

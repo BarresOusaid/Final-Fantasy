@@ -38,19 +38,22 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/ccmake
+
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ous/Documents/github/Final-Fantasy
+CMAKE_SOURCE_DIR = /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ous/Documents/github/Final-Fantasy/build
+CMAKE_BINARY_DIR = /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
-	/usr/bin/cmake -i .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -303,6 +306,30 @@ src/Personne.cpp.s:
 	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Personne.cpp.s
 .PHONY : src/Personne.cpp.s
 
+src/Player.o: src/Player.cpp.o
+.PHONY : src/Player.o
+
+# target to build an object file
+src/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Player.cpp.o
+.PHONY : src/Player.cpp.o
+
+src/Player.i: src/Player.cpp.i
+.PHONY : src/Player.i
+
+# target to preprocess a source file
+src/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Player.cpp.i
+.PHONY : src/Player.cpp.i
+
+src/Player.s: src/Player.cpp.s
+.PHONY : src/Player.s
+
+# target to generate assembly for a file
+src/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Player.cpp.s
+.PHONY : src/Player.cpp.s
+
 src/test.o: src/test.cpp.o
 .PHONY : src/test.o
 
@@ -360,6 +387,9 @@ help:
 	@echo "... src/Personne.o"
 	@echo "... src/Personne.i"
 	@echo "... src/Personne.s"
+	@echo "... src/Player.o"
+	@echo "... src/Player.i"
+	@echo "... src/Player.s"
 	@echo "... src/test.o"
 	@echo "... src/test.i"
 	@echo "... src/test.s"
