@@ -18,6 +18,23 @@ CMakeFiles/execute.dir/src/Element.cpp.o
 CMakeFiles/execute.dir/src/Entity.cpp.o
  /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Entity.cpp
  /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Entity.hpp
+ /usr/lsa/include/SFML/Audio.hpp
+ /usr/lsa/include/SFML/Audio/AlResource.hpp
+ /usr/lsa/include/SFML/Audio/Export.hpp
+ /usr/lsa/include/SFML/Audio/InputSoundFile.hpp
+ /usr/lsa/include/SFML/Audio/Listener.hpp
+ /usr/lsa/include/SFML/Audio/Music.hpp
+ /usr/lsa/include/SFML/Audio/OutputSoundFile.hpp
+ /usr/lsa/include/SFML/Audio/Sound.hpp
+ /usr/lsa/include/SFML/Audio/SoundBuffer.hpp
+ /usr/lsa/include/SFML/Audio/SoundBufferRecorder.hpp
+ /usr/lsa/include/SFML/Audio/SoundFileFactory.hpp
+ /usr/lsa/include/SFML/Audio/SoundFileFactory.inl
+ /usr/lsa/include/SFML/Audio/SoundFileReader.hpp
+ /usr/lsa/include/SFML/Audio/SoundFileWriter.hpp
+ /usr/lsa/include/SFML/Audio/SoundRecorder.hpp
+ /usr/lsa/include/SFML/Audio/SoundSource.hpp
+ /usr/lsa/include/SFML/Audio/SoundStream.hpp
  /usr/lsa/include/SFML/Config.hpp
  /usr/lsa/include/SFML/Graphics.hpp
  /usr/lsa/include/SFML/Graphics/BlendMode.hpp
@@ -124,6 +141,23 @@ CMakeFiles/execute.dir/src/Player.cpp.o
  /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Entity.hpp
  /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Player.cpp
  /users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Player.hpp
+ /usr/lsa/include/SFML/Audio.hpp
+ /usr/lsa/include/SFML/Audio/AlResource.hpp
+ /usr/lsa/include/SFML/Audio/Export.hpp
+ /usr/lsa/include/SFML/Audio/InputSoundFile.hpp
+ /usr/lsa/include/SFML/Audio/Listener.hpp
+ /usr/lsa/include/SFML/Audio/Music.hpp
+ /usr/lsa/include/SFML/Audio/OutputSoundFile.hpp
+ /usr/lsa/include/SFML/Audio/Sound.hpp
+ /usr/lsa/include/SFML/Audio/SoundBuffer.hpp
+ /usr/lsa/include/SFML/Audio/SoundBufferRecorder.hpp
+ /usr/lsa/include/SFML/Audio/SoundFileFactory.hpp
+ /usr/lsa/include/SFML/Audio/SoundFileFactory.inl
+ /usr/lsa/include/SFML/Audio/SoundFileReader.hpp
+ /usr/lsa/include/SFML/Audio/SoundFileWriter.hpp
+ /usr/lsa/include/SFML/Audio/SoundRecorder.hpp
+ /usr/lsa/include/SFML/Audio/SoundSource.hpp
+ /usr/lsa/include/SFML/Audio/SoundStream.hpp
  /usr/lsa/include/SFML/Config.hpp
  /usr/lsa/include/SFML/Graphics.hpp
  /usr/lsa/include/SFML/Graphics/BlendMode.hpp
