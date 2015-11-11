@@ -6,7 +6,47 @@
 
 #IncludeRegexTransform: 
 
-/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Entity.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Butin.cpp
+Butin.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Butin.hpp
+
+/home/ous/Documents/github/Final-Fantasy/src/Butin.hpp
+Objet.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Objet.hpp
+cstdlib
+-
+iostream
+-
+string
+-
+vector
+-
+algorithm
+-
+
+/home/ous/Documents/github/Final-Fantasy/src/Direction.hpp
+cstdlib
+-
+
+/home/ous/Documents/github/Final-Fantasy/src/Element.cpp
+Element.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Element.hpp
+
+/home/ous/Documents/github/Final-Fantasy/src/Element.hpp
+cstdlib
+-
+iostream
+-
+Direction.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Direction.hpp
+TypeId.hpp
+/home/ous/Documents/github/Final-Fantasy/src/TypeId.hpp
+
+/home/ous/Documents/github/Final-Fantasy/src/Entity.cpp
+Entity.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Entity.hpp
+
+/home/ous/Documents/github/Final-Fantasy/src/Entity.hpp
 cstdlib
 -
 iostream
@@ -16,15 +56,117 @@ SFML/Graphics.hpp
 SFML/Audio.hpp
 -
 
-/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Player.cpp
+/home/ous/Documents/github/Final-Fantasy/src/Factory.cpp
+
+/home/ous/Documents/github/Final-Fantasy/src/Factory.hpp
+cstdlib
+-
+iostream
+-
+string
+-
+memory
+-
+map
+-
+iterator
+-
+
+/home/ous/Documents/github/Final-Fantasy/src/Graphique.cpp
+Graphique.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Graphique.hpp
+
+/home/ous/Documents/github/Final-Fantasy/src/Graphique.hpp
+cstdlib
+-
+iostream
+-
+string
+-
+Element.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Element.hpp
+
+/home/ous/Documents/github/Final-Fantasy/src/Joueur.cpp
+Joueur.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Joueur.hpp
+
+/home/ous/Documents/github/Final-Fantasy/src/Joueur.hpp
+cstdlib
+-
+iostream
+-
+string
+-
+Butin.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Butin.hpp
+Personne.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Personne.hpp
+
+/home/ous/Documents/github/Final-Fantasy/src/Objet.cpp
+Objet.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Objet.hpp
+
+/home/ous/Documents/github/Final-Fantasy/src/Objet.hpp
+cstdlib
+-
+iostream
+-
+string
+-
+ObjetTypeId.hpp
+/home/ous/Documents/github/Final-Fantasy/src/ObjetTypeId.hpp
+Graphique.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Graphique.hpp
+TypeId.hpp
+/home/ous/Documents/github/Final-Fantasy/src/TypeId.hpp
+
+/home/ous/Documents/github/Final-Fantasy/src/ObjetTypeId.hpp
+cstdlib
+-
+
+/home/ous/Documents/github/Final-Fantasy/src/Personne.cpp
+Personne.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Personne.hpp
+
+/home/ous/Documents/github/Final-Fantasy/src/Personne.hpp
+cstdlib
+-
+iostream
+-
+string
+-
+Element.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Element.hpp
+TypeId.hpp
+/home/ous/Documents/github/Final-Fantasy/src/TypeId.hpp
+
+/home/ous/Documents/github/Final-Fantasy/src/Player.cpp
 Player.hpp
-/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Player.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Player.hpp
 
-/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Player.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Player.hpp
 Entity.hpp
-/users/s/sandbarr/Documents/My_Project_Depositorie/Final-Fantasy/src/Entity.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Entity.hpp
 
-/usr/lsa/include/SFML/Audio.hpp
+/home/ous/Documents/github/Final-Fantasy/src/TypeId.hpp
+cstdlib
+-
+
+/home/ous/Documents/github/Final-Fantasy/src/test.cpp
+Factory.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Factory.hpp
+Joueur.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Joueur.hpp
+Objet.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Objet.hpp
+Element.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Element.hpp
+iostream
+-
+cstdlib
+-
+
+/usr/local/include/SFML/Audio.hpp
 SFML/System.hpp
 -
 SFML/Audio/InputSoundFile.hpp
@@ -54,15 +196,15 @@ SFML/Audio/SoundSource.hpp
 SFML/Audio/SoundStream.hpp
 -
 
-/usr/lsa/include/SFML/Audio/AlResource.hpp
+/usr/local/include/SFML/Audio/AlResource.hpp
 SFML/Audio/Export.hpp
 -
 
-/usr/lsa/include/SFML/Audio/Export.hpp
+/usr/local/include/SFML/Audio/Export.hpp
 SFML/Config.hpp
 -
 
-/usr/lsa/include/SFML/Audio/InputSoundFile.hpp
+/usr/local/include/SFML/Audio/InputSoundFile.hpp
 SFML/Audio/Export.hpp
 -
 SFML/System/NonCopyable.hpp
@@ -72,13 +214,13 @@ SFML/System/Time.hpp
 string
 -
 
-/usr/lsa/include/SFML/Audio/Listener.hpp
+/usr/local/include/SFML/Audio/Listener.hpp
 SFML/Audio/Export.hpp
 -
 SFML/System/Vector3.hpp
 -
 
-/usr/lsa/include/SFML/Audio/Music.hpp
+/usr/local/include/SFML/Audio/Music.hpp
 SFML/Audio/Export.hpp
 -
 SFML/Audio/SoundStream.hpp
@@ -94,7 +236,7 @@ string
 vector
 -
 
-/usr/lsa/include/SFML/Audio/OutputSoundFile.hpp
+/usr/local/include/SFML/Audio/OutputSoundFile.hpp
 SFML/Audio/Export.hpp
 -
 SFML/System/NonCopyable.hpp
@@ -102,7 +244,7 @@ SFML/System/NonCopyable.hpp
 string
 -
 
-/usr/lsa/include/SFML/Audio/Sound.hpp
+/usr/local/include/SFML/Audio/Sound.hpp
 SFML/Audio/Export.hpp
 -
 SFML/Audio/SoundSource.hpp
@@ -112,7 +254,7 @@ SFML/System/Time.hpp
 cstdlib
 -
 
-/usr/lsa/include/SFML/Audio/SoundBuffer.hpp
+/usr/local/include/SFML/Audio/SoundBuffer.hpp
 SFML/Audio/Export.hpp
 -
 SFML/Audio/AlResource.hpp
@@ -126,7 +268,7 @@ vector
 set
 -
 
-/usr/lsa/include/SFML/Audio/SoundBufferRecorder.hpp
+/usr/local/include/SFML/Audio/SoundBufferRecorder.hpp
 SFML/Audio/Export.hpp
 -
 SFML/Audio/SoundBuffer.hpp
@@ -136,7 +278,7 @@ SFML/Audio/SoundRecorder.hpp
 vector
 -
 
-/usr/lsa/include/SFML/Audio/SoundFileFactory.hpp
+/usr/local/include/SFML/Audio/SoundFileFactory.hpp
 SFML/Audio/Export.hpp
 -
 string
@@ -146,21 +288,21 @@ vector
 SFML/Audio/SoundFileFactory.inl
 -
 
-/usr/lsa/include/SFML/Audio/SoundFileFactory.inl
+/usr/local/include/SFML/Audio/SoundFileFactory.inl
 
-/usr/lsa/include/SFML/Audio/SoundFileReader.hpp
+/usr/local/include/SFML/Audio/SoundFileReader.hpp
 SFML/Audio/Export.hpp
 -
 string
 -
 
-/usr/lsa/include/SFML/Audio/SoundFileWriter.hpp
+/usr/local/include/SFML/Audio/SoundFileWriter.hpp
 SFML/Audio/Export.hpp
 -
 string
 -
 
-/usr/lsa/include/SFML/Audio/SoundRecorder.hpp
+/usr/local/include/SFML/Audio/SoundRecorder.hpp
 SFML/Audio/Export.hpp
 -
 SFML/Audio/AlResource.hpp
@@ -174,7 +316,7 @@ vector
 string
 -
 
-/usr/lsa/include/SFML/Audio/SoundSource.hpp
+/usr/local/include/SFML/Audio/SoundSource.hpp
 SFML/Audio/Export.hpp
 -
 SFML/Audio/AlResource.hpp
@@ -182,7 +324,7 @@ SFML/Audio/AlResource.hpp
 SFML/System/Vector3.hpp
 -
 
-/usr/lsa/include/SFML/Audio/SoundStream.hpp
+/usr/local/include/SFML/Audio/SoundStream.hpp
 SFML/Audio/Export.hpp
 -
 SFML/Audio/SoundSource.hpp
@@ -196,11 +338,11 @@ SFML/System/Mutex.hpp
 cstdlib
 -
 
-/usr/lsa/include/SFML/Config.hpp
+/usr/local/include/SFML/Config.hpp
 TargetConditionals.h
-/usr/lsa/include/SFML/TargetConditionals.h
+/usr/local/include/SFML/TargetConditionals.h
 
-/usr/lsa/include/SFML/Graphics.hpp
+/usr/local/include/SFML/Graphics.hpp
 SFML/Window.hpp
 -
 SFML/Graphics/BlendMode.hpp
@@ -254,21 +396,21 @@ SFML/Graphics/VertexArray.hpp
 SFML/Graphics/View.hpp
 -
 
-/usr/lsa/include/SFML/Graphics/BlendMode.hpp
+/usr/local/include/SFML/Graphics/BlendMode.hpp
 SFML/Graphics/Export.hpp
 -
 
-/usr/lsa/include/SFML/Graphics/CircleShape.hpp
+/usr/local/include/SFML/Graphics/CircleShape.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Shape.hpp
 -
 
-/usr/lsa/include/SFML/Graphics/Color.hpp
+/usr/local/include/SFML/Graphics/Color.hpp
 SFML/Graphics/Export.hpp
 -
 
-/usr/lsa/include/SFML/Graphics/ConvexShape.hpp
+/usr/local/include/SFML/Graphics/ConvexShape.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Shape.hpp
@@ -276,17 +418,17 @@ SFML/Graphics/Shape.hpp
 vector
 -
 
-/usr/lsa/include/SFML/Graphics/Drawable.hpp
+/usr/local/include/SFML/Graphics/Drawable.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/RenderStates.hpp
 -
 
-/usr/lsa/include/SFML/Graphics/Export.hpp
+/usr/local/include/SFML/Graphics/Export.hpp
 SFML/Config.hpp
 -
 
-/usr/lsa/include/SFML/Graphics/Font.hpp
+/usr/local/include/SFML/Graphics/Font.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Glyph.hpp
@@ -306,13 +448,13 @@ string
 vector
 -
 
-/usr/lsa/include/SFML/Graphics/Glyph.hpp
+/usr/local/include/SFML/Graphics/Glyph.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Rect.hpp
 -
 
-/usr/lsa/include/SFML/Graphics/Image.hpp
+/usr/local/include/SFML/Graphics/Image.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Color.hpp
@@ -324,9 +466,9 @@ string
 vector
 -
 
-/usr/lsa/include/SFML/Graphics/PrimitiveType.hpp
+/usr/local/include/SFML/Graphics/PrimitiveType.hpp
 
-/usr/lsa/include/SFML/Graphics/Rect.hpp
+/usr/local/include/SFML/Graphics/Rect.hpp
 SFML/System/Vector2.hpp
 -
 algorithm
@@ -334,15 +476,15 @@ algorithm
 SFML/Graphics/Rect.inl
 -
 
-/usr/lsa/include/SFML/Graphics/Rect.inl
+/usr/local/include/SFML/Graphics/Rect.inl
 
-/usr/lsa/include/SFML/Graphics/RectangleShape.hpp
+/usr/local/include/SFML/Graphics/RectangleShape.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Shape.hpp
 -
 
-/usr/lsa/include/SFML/Graphics/RenderStates.hpp
+/usr/local/include/SFML/Graphics/RenderStates.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/BlendMode.hpp
@@ -350,7 +492,7 @@ SFML/Graphics/BlendMode.hpp
 SFML/Graphics/Transform.hpp
 -
 
-/usr/lsa/include/SFML/Graphics/RenderTarget.hpp
+/usr/local/include/SFML/Graphics/RenderTarget.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Color.hpp
@@ -372,7 +514,7 @@ SFML/Graphics/Vertex.hpp
 SFML/System/NonCopyable.hpp
 -
 
-/usr/lsa/include/SFML/Graphics/RenderTexture.hpp
+/usr/local/include/SFML/Graphics/RenderTexture.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Texture.hpp
@@ -380,7 +522,7 @@ SFML/Graphics/Texture.hpp
 SFML/Graphics/RenderTarget.hpp
 -
 
-/usr/lsa/include/SFML/Graphics/RenderWindow.hpp
+/usr/local/include/SFML/Graphics/RenderWindow.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/RenderTarget.hpp
@@ -392,7 +534,7 @@ SFML/Window/Window.hpp
 string
 -
 
-/usr/lsa/include/SFML/Graphics/Shader.hpp
+/usr/local/include/SFML/Graphics/Shader.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Transform.hpp
@@ -412,7 +554,7 @@ map
 string
 -
 
-/usr/lsa/include/SFML/Graphics/Shape.hpp
+/usr/local/include/SFML/Graphics/Shape.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Drawable.hpp
@@ -424,7 +566,7 @@ SFML/Graphics/VertexArray.hpp
 SFML/System/Vector2.hpp
 -
 
-/usr/lsa/include/SFML/Graphics/Sprite.hpp
+/usr/local/include/SFML/Graphics/Sprite.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Drawable.hpp
@@ -436,7 +578,7 @@ SFML/Graphics/Vertex.hpp
 SFML/Graphics/Rect.hpp
 -
 
-/usr/lsa/include/SFML/Graphics/Text.hpp
+/usr/local/include/SFML/Graphics/Text.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Drawable.hpp
@@ -456,7 +598,7 @@ string
 vector
 -
 
-/usr/lsa/include/SFML/Graphics/Texture.hpp
+/usr/local/include/SFML/Graphics/Texture.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Image.hpp
@@ -464,7 +606,7 @@ SFML/Graphics/Image.hpp
 SFML/Window/GlResource.hpp
 -
 
-/usr/lsa/include/SFML/Graphics/Transform.hpp
+/usr/local/include/SFML/Graphics/Transform.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Rect.hpp
@@ -472,13 +614,13 @@ SFML/Graphics/Rect.hpp
 SFML/System/Vector2.hpp
 -
 
-/usr/lsa/include/SFML/Graphics/Transformable.hpp
+/usr/local/include/SFML/Graphics/Transformable.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Transform.hpp
 -
 
-/usr/lsa/include/SFML/Graphics/Vertex.hpp
+/usr/local/include/SFML/Graphics/Vertex.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Color.hpp
@@ -486,7 +628,7 @@ SFML/Graphics/Color.hpp
 SFML/System/Vector2.hpp
 -
 
-/usr/lsa/include/SFML/Graphics/VertexArray.hpp
+/usr/local/include/SFML/Graphics/VertexArray.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Vertex.hpp
@@ -500,7 +642,7 @@ SFML/Graphics/Drawable.hpp
 vector
 -
 
-/usr/lsa/include/SFML/Graphics/View.hpp
+/usr/local/include/SFML/Graphics/View.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Rect.hpp
@@ -510,7 +652,7 @@ SFML/Graphics/Transform.hpp
 SFML/System/Vector2.hpp
 -
 
-/usr/lsa/include/SFML/System.hpp
+/usr/local/include/SFML/System.hpp
 SFML/Config.hpp
 -
 SFML/System/Clock.hpp
@@ -548,23 +690,23 @@ SFML/System/Vector2.hpp
 SFML/System/Vector3.hpp
 -
 
-/usr/lsa/include/SFML/System/Clock.hpp
+/usr/local/include/SFML/System/Clock.hpp
 SFML/System/Export.hpp
 -
 SFML/System/Time.hpp
 -
 
-/usr/lsa/include/SFML/System/Err.hpp
+/usr/local/include/SFML/System/Err.hpp
 SFML/System/Export.hpp
 -
 ostream
 -
 
-/usr/lsa/include/SFML/System/Export.hpp
+/usr/local/include/SFML/System/Export.hpp
 SFML/Config.hpp
 -
 
-/usr/lsa/include/SFML/System/FileInputStream.hpp
+/usr/local/include/SFML/System/FileInputStream.hpp
 SFML/Config.hpp
 -
 SFML/System/Export.hpp
@@ -578,19 +720,19 @@ cstdio
 string
 -
 
-/usr/lsa/include/SFML/System/InputStream.hpp
+/usr/local/include/SFML/System/InputStream.hpp
 SFML/Config.hpp
 -
 SFML/System/Export.hpp
 -
 
-/usr/lsa/include/SFML/System/Lock.hpp
+/usr/local/include/SFML/System/Lock.hpp
 SFML/System/Export.hpp
 -
 SFML/System/NonCopyable.hpp
 -
 
-/usr/lsa/include/SFML/System/MemoryInputStream.hpp
+/usr/local/include/SFML/System/MemoryInputStream.hpp
 SFML/Config.hpp
 -
 SFML/System/InputStream.hpp
@@ -600,23 +742,23 @@ SFML/System/Export.hpp
 cstdlib
 -
 
-/usr/lsa/include/SFML/System/Mutex.hpp
+/usr/local/include/SFML/System/Mutex.hpp
 SFML/System/Export.hpp
 -
 SFML/System/NonCopyable.hpp
 -
 
-/usr/lsa/include/SFML/System/NonCopyable.hpp
+/usr/local/include/SFML/System/NonCopyable.hpp
 SFML/System/Export.hpp
 -
 
-/usr/lsa/include/SFML/System/Sleep.hpp
+/usr/local/include/SFML/System/Sleep.hpp
 SFML/System/Export.hpp
 -
 SFML/System/Time.hpp
 -
 
-/usr/lsa/include/SFML/System/String.hpp
+/usr/local/include/SFML/System/String.hpp
 SFML/System/Export.hpp
 -
 SFML/System/Utf.hpp
@@ -628,9 +770,9 @@ string
 SFML/System/String.inl
 -
 
-/usr/lsa/include/SFML/System/String.inl
+/usr/local/include/SFML/System/String.inl
 
-/usr/lsa/include/SFML/System/Thread.hpp
+/usr/local/include/SFML/System/Thread.hpp
 SFML/System/Export.hpp
 -
 SFML/System/NonCopyable.hpp
@@ -640,9 +782,9 @@ cstdlib
 SFML/System/Thread.inl
 -
 
-/usr/lsa/include/SFML/System/Thread.inl
+/usr/local/include/SFML/System/Thread.inl
 
-/usr/lsa/include/SFML/System/ThreadLocal.hpp
+/usr/local/include/SFML/System/ThreadLocal.hpp
 SFML/System/Export.hpp
 -
 SFML/System/NonCopyable.hpp
@@ -650,19 +792,19 @@ SFML/System/NonCopyable.hpp
 cstdlib
 -
 
-/usr/lsa/include/SFML/System/ThreadLocalPtr.hpp
+/usr/local/include/SFML/System/ThreadLocalPtr.hpp
 SFML/System/ThreadLocal.hpp
 -
 SFML/System/ThreadLocalPtr.inl
 -
 
-/usr/lsa/include/SFML/System/ThreadLocalPtr.inl
+/usr/local/include/SFML/System/ThreadLocalPtr.inl
 
-/usr/lsa/include/SFML/System/Time.hpp
+/usr/local/include/SFML/System/Time.hpp
 SFML/System/Export.hpp
 -
 
-/usr/lsa/include/SFML/System/Utf.hpp
+/usr/local/include/SFML/System/Utf.hpp
 SFML/Config.hpp
 -
 algorithm
@@ -676,21 +818,21 @@ cstdlib
 SFML/System/Utf.inl
 -
 
-/usr/lsa/include/SFML/System/Utf.inl
+/usr/local/include/SFML/System/Utf.inl
 
-/usr/lsa/include/SFML/System/Vector2.hpp
+/usr/local/include/SFML/System/Vector2.hpp
 SFML/System/Vector2.inl
 -
 
-/usr/lsa/include/SFML/System/Vector2.inl
+/usr/local/include/SFML/System/Vector2.inl
 
-/usr/lsa/include/SFML/System/Vector3.hpp
+/usr/local/include/SFML/System/Vector3.hpp
 SFML/System/Vector3.inl
 -
 
-/usr/lsa/include/SFML/System/Vector3.inl
+/usr/local/include/SFML/System/Vector3.inl
 
-/usr/lsa/include/SFML/Window.hpp
+/usr/local/include/SFML/Window.hpp
 SFML/System.hpp
 -
 SFML/Window/Context.hpp
@@ -718,7 +860,7 @@ SFML/Window/WindowHandle.hpp
 SFML/Window/WindowStyle.hpp
 -
 
-/usr/lsa/include/SFML/Window/Context.hpp
+/usr/local/include/SFML/Window/Context.hpp
 SFML/Window/Export.hpp
 -
 SFML/Window/GlResource.hpp
@@ -728,9 +870,9 @@ SFML/Window/ContextSettings.hpp
 SFML/System/NonCopyable.hpp
 -
 
-/usr/lsa/include/SFML/Window/ContextSettings.hpp
+/usr/local/include/SFML/Window/ContextSettings.hpp
 
-/usr/lsa/include/SFML/Window/Event.hpp
+/usr/local/include/SFML/Window/Event.hpp
 SFML/Config.hpp
 -
 SFML/Window/Joystick.hpp
@@ -742,31 +884,31 @@ SFML/Window/Mouse.hpp
 SFML/Window/Sensor.hpp
 -
 
-/usr/lsa/include/SFML/Window/Export.hpp
+/usr/local/include/SFML/Window/Export.hpp
 SFML/Config.hpp
 -
 
-/usr/lsa/include/SFML/Window/GlResource.hpp
+/usr/local/include/SFML/Window/GlResource.hpp
 SFML/Window/Export.hpp
 -
 
-/usr/lsa/include/SFML/Window/Joystick.hpp
+/usr/local/include/SFML/Window/Joystick.hpp
 SFML/Window/Export.hpp
 -
 SFML/System/String.hpp
 -
 
-/usr/lsa/include/SFML/Window/Keyboard.hpp
+/usr/local/include/SFML/Window/Keyboard.hpp
 SFML/Window/Export.hpp
 -
 
-/usr/lsa/include/SFML/Window/Mouse.hpp
+/usr/local/include/SFML/Window/Mouse.hpp
 SFML/Window/Export.hpp
 -
 SFML/System/Vector2.hpp
 -
 
-/usr/lsa/include/SFML/Window/Sensor.hpp
+/usr/local/include/SFML/Window/Sensor.hpp
 SFML/Window/Export.hpp
 -
 SFML/System/Vector3.hpp
@@ -774,19 +916,19 @@ SFML/System/Vector3.hpp
 SFML/System/Time.hpp
 -
 
-/usr/lsa/include/SFML/Window/Touch.hpp
+/usr/local/include/SFML/Window/Touch.hpp
 SFML/Window/Export.hpp
 -
 SFML/System/Vector2.hpp
 -
 
-/usr/lsa/include/SFML/Window/VideoMode.hpp
+/usr/local/include/SFML/Window/VideoMode.hpp
 SFML/Window/Export.hpp
 -
 vector
 -
 
-/usr/lsa/include/SFML/Window/Window.hpp
+/usr/local/include/SFML/Window/Window.hpp
 SFML/Window/Export.hpp
 -
 SFML/Window/ContextSettings.hpp
@@ -808,9 +950,9 @@ SFML/System/NonCopyable.hpp
 SFML/System/String.hpp
 -
 
-/usr/lsa/include/SFML/Window/WindowHandle.hpp
+/usr/local/include/SFML/Window/WindowHandle.hpp
 SFML/Config.hpp
 -
 
-/usr/lsa/include/SFML/Window/WindowStyle.hpp
+/usr/local/include/SFML/Window/WindowStyle.hpp
 
