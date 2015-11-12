@@ -23,6 +23,7 @@
 
 // Here is a small helper for you ! Have a look.
 
+
 using namespace sf;
 using namespace std;
 
@@ -34,6 +35,7 @@ int main(int, char const**)
     int i_up = 0;
     int i_left = 0;
     int i_right = 0;
+    int direction = 0;
     RenderWindow window(sf::VideoMode(1000, 800, 32), "SFML window", Style::Default);
     Time time;
     Clock clock;
@@ -97,10 +99,42 @@ int main(int, char const**)
         sf::Event event;
         while (window.pollEvent(event))
         {
+            if(direction == 0)
+            {
+                level[0] = 1;
+                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
+                    return -1;
+            }
             
-            level[0] = 1;
-            if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
-                return -1;
+            if(direction == 1)
+            {
+                level[0] = 1;
+                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
+                    return -1;
+            }
+            
+            if(direction == 2)
+            {
+                level[0] = 10;
+                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
+                    return -1;
+            }
+            
+            if(direction == 3)
+            {
+                level[0] = 4;
+                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
+                    return -1;
+            }
+            
+            if(direction == 4)
+            {
+                level[0] = 7;
+                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
+                    return -1;
+            }
+            
+         
             // Close window: exit
             switch (event.type)
             {
@@ -109,6 +143,7 @@ int main(int, char const**)
                     {
                         case sf::Keyboard::Down:
                             i_down++;
+                            direction = 1;
                             if(i_down % 2 == 0)
                             {
                                 level[0] = 0;
@@ -128,6 +163,7 @@ int main(int, char const**)
                             
                         case sf::Keyboard::Up:
                             i_up++;
+                            direction = 2;
                             if(i_up % 2 == 0)
                             {
                                 level[0] = 9;
@@ -147,6 +183,7 @@ int main(int, char const**)
                             
                         case sf::Keyboard::Left:
                             i_left++;
+                            direction = 3;
                             if(i_left % 2 == 0)
                             {
                                 level[0] = 3;
@@ -165,6 +202,7 @@ int main(int, char const**)
                             
                         case sf::Keyboard::Right:
                             i_right++;
+                            direction = 4;
                             if(i_right % 2 == 0)
                             {
                                 level[0] = 6;
