@@ -18,7 +18,7 @@ public:
 		THIRD,
 		FOURTH,
 		SIZE
-	}
+	};
 	
 	// les différentes directions des personnages
 	enum Directions
@@ -28,7 +28,9 @@ public:
 		SOUTH, 
 		WEST,
 		DIRECTIONS
-	}
+	};
+	
+	static const int INVENTORY_SIZE = 256;
 	
 	// le personnage active
 	void setActive(int character);
@@ -110,5 +112,5 @@ private:
 		// ticks played, ticks at last update
 		unsigned int ticksPlayed, ticksUpdate;
 
-
+};
 #endif
