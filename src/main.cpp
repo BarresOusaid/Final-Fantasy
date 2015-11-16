@@ -35,14 +35,13 @@ int main(int, char const**)
     int i_up = 0;
     int i_left = 0;
     int i_right = 0;
-    int direction = 0;
+    int directionID = 0;
     RenderWindow window(sf::VideoMode(1000, 800, 32), "SFML window", Style::Default);
     Time time;
     Clock clock;
-
+    Player player;
+    player.getTileMap().setPosition(200, 200);
     // create the tilemap from the level definition
-    TileMap map;
-    map.setPosition(200, 200);
     int level[] = {0};
     View view(sf::FloatRect(0, 0, 500, 500));
     
@@ -56,7 +55,7 @@ int main(int, char const**)
     /////////////// Load a texture ///////////////
     Texture texture;
     /////////////// Loading Village image ///////////////
-    if (!texture.loadFromFile("../res/Village/Mystic_Quest_village_1.png"))
+    if (!texture.loadFromFile("../Sprites/Village/Mystic_Quest_village_1.png"))
     {
         return EXIT_FAILURE;
     }
@@ -71,27 +70,27 @@ int main(int, char const**)
     /////////////// Setting Sprite color ///////////////
     sprite.setColor(Color(0, 100, 255));
     ////////////////////////////////////////////////////
-
+    
     /////////////// Scaling Sprite ///////////////
     sprite.setScale((Vector2f(1, 1)));
     /////////////// Create a graphical text to display ///////////////
-    Font font;
+    /*Font font;
     if (!font.loadFromFile("../res/Songs/Ferrum.ttf"))
     {
         return EXIT_FAILURE;
-    }
-    Text text("Final Mystic Quest", font, 50);
-    text.setColor(Color::Black);
-
+    }*/
+    /*Text text("Final Mystic Quest", font, 50);
+    text.setColor(Color::Black);*/
+    
     // Load a music to play
-    Music music;
+    /*Music music;
     if (!music.openFromFile("../res/Songs/City_of_wind.ogg")) {
         return EXIT_FAILURE;
-    }
-
+    }*/
+    
     // Play the music
     //music.play();
-
+    
     // Start the game loop
     while (window.isOpen())
     {
@@ -99,42 +98,29 @@ int main(int, char const**)
         sf::Event event;
         while (window.pollEvent(event))
         {
-            if(direction == 0)
+            switch (directionID)
             {
-                level[0] = 1;
-                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
-                    return -1;
+                case 1:
+                player.changeCharacterSpriteDirection(1);
+                    break;
+                    
+                case 2:
+                player.changeCharacterSpriteDirection(10);
+                    break;
+            
+                case 3:
+                player.changeCharacterSpriteDirection(4);
+                    break;
+                    
+                case 4:
+                player.changeCharacterSpriteDirection(7);
+                    break;
+        
+                default:
+                player.changeCharacterSpriteDirection(1);
+                    break;
             }
             
-            if(direction == 1)
-            {
-                level[0] = 1;
-                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
-                    return -1;
-            }
-            
-            if(direction == 2)
-            {
-                level[0] = 10;
-                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
-                    return -1;
-            }
-            
-            if(direction == 3)
-            {
-                level[0] = 4;
-                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
-                    return -1;
-            }
-            
-            if(direction == 4)
-            {
-                level[0] = 7;
-                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
-                    return -1;
-            }
-            
-         
             // Close window: exit
             switch (event.type)
             {
@@ -143,87 +129,69 @@ int main(int, char const**)
                     {
                         case sf::Keyboard::Down:
                             i_down++;
-                            direction = 1;
-                            if(i_down % 2 == 0)
+                            directionID = 1;
+                            if(i_down%2 == 0)
                             {
-                                level[0] = 0;
-                                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
-                                    return -1;
-                                map.move(0, 3);
+                                player.changeCharacterSpriteDirection(0);
+                                player.moveCharacterSprite(Player::SOUTH);
                             }
-                            if(i_down % 2 == 1)
+                            if(i_down%2 == 1)
                             {
-                                level[0] = 2;
-                                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
-                                    return -1;
-                                map.move(0, 3);
-                                
+                                player.changeCharacterSpriteDirection(2);
+                                player.moveCharacterSprite(Player::SOUTH);
                             }
-                            break;
-                            
+                                break;
+                        
                         case sf::Keyboard::Up:
                             i_up++;
-                            direction = 2;
+                            directionID = 2;
                             if(i_up % 2 == 0)
                             {
-                                level[0] = 9;
-                                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
-                                    return -1;
-                                map.move(0, -3);
+                                player.changeCharacterSpriteDirection(9);
+                                player.moveCharacterSprite(Player::NORTH);
                             }
                             if(i_up % 2 == 1)
                             {
-                                level[0] = 11;
-                                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
-                                    return -1;
-                                map.move(0, -3);
+                                player.changeCharacterSpriteDirection(11);
+                                player.moveCharacterSprite(Player::NORTH);
                             }
-                            break;
-
-                            
+                                break;
+                        
                         case sf::Keyboard::Left:
                             i_left++;
-                            direction = 3;
+                            directionID = 3;
                             if(i_left % 2 == 0)
                             {
-                                level[0] = 3;
-                                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
-                                    return -1;
-                                map.move(-3, 0);
+                                player.changeCharacterSpriteDirection(3);
+                                player.moveCharacterSprite(Player::WEST);
                             }
                             if(i_left % 2 == 1)
                             {
-                                level[0] = 5;
-                                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
-                                    return -1;
-                                map.move(-3, 0);
+                                player.changeCharacterSpriteDirection(5);
+                                player.moveCharacterSprite(Player::WEST);
                             }
-                            break;
-                            
+                                break;
+                        
                         case sf::Keyboard::Right:
                             i_right++;
-                            direction = 4;
+                            directionID = 4;
                             if(i_right % 2 == 0)
                             {
-                                level[0] = 6;
-                                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
-                                    return -1;
-                                map.move(3, 0);
+                                player.changeCharacterSpriteDirection(6);
+                                player.moveCharacterSprite(Player::EAST);
                             }
                             if(i_right % 2 == 1)
                             {
-                                level[0] = 8;
-                                if (!map.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), level, 1, 1))
-                                    return -1;
-                                map.move(3, 0);
+                                player.changeCharacterSpriteDirection(8);
+                                player.moveCharacterSprite(Player::EAST);
                             }
-                            break;
+                                break;
                     }
-                    break;
+                        break;
                     
                 case Event::Closed:
                     window.close();
-                    break;
+                        break;
                     
             }
         }
@@ -231,16 +199,16 @@ int main(int, char const**)
         
         // Clear screen
         window.clear();
-
+        
         // Draw the sprite
         window.draw(sprite);
-       
+        
         // Draw the string
-        window.draw(map);
-
+        window.draw(player.getTileMap());
+        
         // Update the window
         window.display();
     }
-
+    
     return EXIT_SUCCESS;
 }

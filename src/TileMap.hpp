@@ -9,11 +9,8 @@
 #ifndef TileMap_h
 #define TileMap_h
 #include<iostream>
-#include <SFML/Audio.hpp>
-#include <SFML/Graphics.hpp>
-#include "Entity.hpp"
 
-class TileMap : public sf::Drawable, public sf::Transformable {
+class TileMap : public sf::Drawable, public sf::Transformable{
 
 public:
     
@@ -58,6 +55,7 @@ public:
         return true;
     }
     
+
 private:
     
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const

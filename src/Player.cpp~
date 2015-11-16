@@ -5,7 +5,7 @@ using namespace sf;
 Player::Player() {
     
     tileID[0] = {0};
-    characterMap.load("../Sprites/Characters/Benjamin.png", sf::Vector2u(32, 32), tileID, 1, 1);
+    characterMap.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), tileID, 1, 1);
     characterMap.setPosition(200, 200);
     characterMap.setScale(0.7, 0.7);
 
