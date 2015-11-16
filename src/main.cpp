@@ -53,26 +53,26 @@ int main(int, char const**)
     /////////////////////////////////////////////
     
     /////////////// Load a texture ///////////////
-    Texture texture;
+    Texture *texture = new Texture;
     /////////////// Loading Village image ///////////////
-    if (!texture.loadFromFile("../Sprites/Village/Mystic_Quest_village_1.png"))
+    /*if (!texture.loadFromFile("../res/Village/Mystic_Quest_village_1.png"))
     {
         return EXIT_FAILURE;
-    }
+    }*/
     /////////////// Setting Smootness for texture ///////////////
-    texture.setSmooth(true);
+    texture->setSmooth(true);
     /////////////////////////////////////////////////////////////
     
     /////////////// Assigning Spirite to texture ///////////////
-    sprite.setTexture(texture);
+    //sprite.setTexture(texture);
     ////////////////////////////////////////////////////////////
     
     /////////////// Setting Sprite color ///////////////
-    sprite.setColor(Color(0, 100, 255));
+    //sprite.setColor(Color(0, 100, 255));
     ////////////////////////////////////////////////////
     
     /////////////// Scaling Sprite ///////////////
-    sprite.setScale((Vector2f(1, 1)));
+    //sprite.setScale((Vector2f(1, 1)));
     /////////////// Create a graphical text to display ///////////////
     /*Font font;
     if (!font.loadFromFile("../res/Songs/Ferrum.ttf"))
@@ -83,17 +83,27 @@ int main(int, char const**)
     text.setColor(Color::Black);*/
     
     // Load a music to play
-    /*Music music;
-    if (!music.openFromFile("../res/Songs/City_of_wind.ogg")) {
+    Music music;
+    if (!music.openFromFile("../res/Songs/Main_Theme_FF7.ogg")) {
         return EXIT_FAILURE;
-    }*/
+    }
     
     // Play the music
-    //music.play();
+    music.play();
     
     // Start the game loop
     while (window.isOpen())
-    {
+    {	
+		texture->loadFromFile("../res/Village/Mystic_Quest_village_1.png");
+		sprite.setTexture(*texture);
+		cout << player.getTileMap().getPosition().x <<" "<< player.getTileMap().getPosition().y << endl;
+		if(((player.getTileMap().getPosition().x) >= 107) && ((player.getTileMap().getPosition().x) <= 109)
+		 && (player.getTileMap().getPosition().y >= 299)&&(player.getTileMap().getPosition().y <= 301))
+		{
+			//texture.loadFromFile("../res/Village/Black_Texture.png");
+			texture->loadFromFile("../res/Dungeon/Bone_dungeon/Mystic_Quest_bone_dungeon_1.png");
+			//music.openFromFile("../res/Songs/City_of_wind.ogg");
+		}		
         // Process events
         sf::Event event;
         while (window.pollEvent(event))
@@ -120,6 +130,7 @@ int main(int, char const**)
                 player.changeCharacterSpriteDirection(1);
                     break;
             }
+          
             
             // Close window: exit
             switch (event.type)
@@ -134,6 +145,8 @@ int main(int, char const**)
                             {
                                 player.changeCharacterSpriteDirection(0);
                                 player.moveCharacterSprite(Player::SOUTH);
+                                //texture.loadFromFile("../res/Dungeon/Bone_dungeon/Mystic_Quest_bone_dungeon_1.png");
+                                //sprite.setScale((Vector2f(1, 1)));
                             }
                             if(i_down%2 == 1)
                             {
@@ -208,6 +221,7 @@ int main(int, char const**)
         
         // Update the window
         window.display();
+        
     }
     
     return EXIT_SUCCESS;
