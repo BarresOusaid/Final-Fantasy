@@ -34,12 +34,12 @@ public:
 	
 	// le personnage active
 	void setActive(int character);
-	Characters getActive();
+	//Characters getActive();
 	
 	// pause le personnage
-	void pause();
+	/*void pause();
 	void unpause();
-	bool isPaused();
+	bool isPaused();*/
 	
 	// position du personnage
 	int getX();
@@ -64,7 +64,7 @@ public:
 	int getMap();
 	void setMap(int mapID);
 	std::string getRegion();
-	void setRegion(std::string name);
+	void setRegion(std::string name);	
 
 
 private:
@@ -111,6 +111,7 @@ private:
 
 		// ticks played, ticks at last update
 		unsigned int ticksPlayed, ticksUpdate;
+		sf::Time time;
 
 };
 #endif
