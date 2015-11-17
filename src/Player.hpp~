@@ -3,6 +3,7 @@
 
 #include "Entity.hpp"
 #include "TileMap.hpp"
+#include "Input.hpp"
 
 #define NUMBER_OF_TILE 30
 
