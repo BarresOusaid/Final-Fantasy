@@ -5,7 +5,7 @@ using namespace sf;
 Player::Player() {
     
     tileID[0] = {0};
-    characterMap.load("../Sprites/Characters/Benjamin.png", sf::Vector2u(32, 32), tileID, 1, 1);
+    characterMap.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), tileID, 1, 1);
     characterMap.setPosition(200, 200);
     characterMap.setScale(0.7, 0.7);
 
@@ -17,8 +17,8 @@ Player::~Player() {
 
 void Player::changeCharacterSpriteDirection(int directionID)
 {
-    tileID[0] = {directionID};
-    characterMap.load("../Sprites/Characters/Benjamin.png", sf::Vector2u(32, 32), tileID, 1, 1);
+    tileID[0] = {(char) directionID};
+    characterMap.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), tileID, 1, 1);
 }
 
 void Player::moveCharacterSprite (Directions direction)

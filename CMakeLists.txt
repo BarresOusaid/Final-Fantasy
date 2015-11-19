@@ -16,7 +16,7 @@ set (EXECUTABLE_OUTPUT_PATH ../bin/${CMAKE_BUILD_TYPE})
 file(
 	GLOB_RECURSE
 	source_files
-	src/*
+	src/*.cpp
 )
 
 #Déclaration de l’éxecutable

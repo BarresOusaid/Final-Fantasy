@@ -30,6 +30,6 @@ public:
 private:
     
     TileMap characterMap;
-    int tileID[1];
+    char tileID[1];
 };
 #endif
