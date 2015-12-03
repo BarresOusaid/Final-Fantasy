@@ -3,8 +3,8 @@
 
 #include "Player.hpp"
 #include "Input.hpp"
-#include "StateManager.hpp"
 
+class Player;
 class StateManager;
 
 class State {
@@ -40,7 +40,8 @@ protected:
 	Player *player;
 
 	// states can push/pop/change state stack
-	StateManager *stateManager;
+	//ajouter un state manager
+	StateManager *sm;
 
 	// états précédant et suivant
 	State *next, *prev;

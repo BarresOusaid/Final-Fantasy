@@ -1,59 +1,118 @@
 #include "Map.hpp"
 
 Map::Map() {
+    
+    myInput=0;
+    myPlayer=0;
+    myMapState=0;
+    next=0;
+    prev=0;
+    tiles=0;
 
 }
 
 Map::~Map() {
+    if (tiles) {
+        int xTiles = mapWidth / tileSize;
+        for (int i = 0; i < xTiles; i++) {
+            delete[] tiles[i];
+            tiles[i] = 0;
+        }
+        delete[] tiles;
+        tiles = 0;
+    }
 }
 
-void Map::updateMap() {
-    if (input->getStart()) {
-        input->resetStart();
+void Map::init(Player *player, Input *input, MapState *ms){
+    myPlayer = player;
+    myInput = input;
+    ms = ms;
+    //popMap(2, this);
+}
 
-        // enter party menu from any
-        // map when start button pressed
-        return;
-    }
+void Map::init(Player *player, Input *input){
+    myPlayer = player;
+    myInput = input;
+    //myMapState = ms;
+    //map.setScale(2, 2);
+}
+
+void Map::updateMap()
+{
     update();
 }
 
-void Map::init() {
-
-    	// map filename containing map data
-    	std::string mapData = "../res/map.txt";
-
-    	std::ifstream mapfile;
-    	mapfile.open(mapData.c_str());
-      
-        std::stringstream buffer; 
-        // variable contenant l'intégralité du fichier 
-            // copier l'intégralité du fichier dans le buffer 
-        buffer << mapfile.rdbuf(); 
-            // nous n'avons plus besoin du fichier ! 
-        mapfile.close(); 
-            // manipulations du buffer...
-            std::string tmp = buffer.str();
-            const char* cstr = tmp.c_str(); 
-        std::cout << "Taille du buffer : " << cstr << '\n'; 
-
-        if (!map.load("../res/tileSet.png", sf::Vector2u(32, 32), cstr, 16, 8))
-            std::cout << "erreur de load"<< std::endl;
-    }
-
-void Map::pauseMap() {
+void Map::pauseMap()
+{
     pause();
 }
 
-void Map::unpauseMap() {
-    // restore party position
-    //player->setX(currentX);
-    //player->setY(currentY);
+void Map::unpauseMap()
+{
+    unpause();
+}
 
-    // restore map name
-    //player->setRegion(region);
+TileMap Map::getMap(){
+    return map;
+}
 
-    //unpause();
+Player Map::getPlayer(){
+    return *myPlayer;
+}
 
-    std::cout <<"walou makhdamch"<< std::endl;
+void Map::loadMap(std::string path) {
+
+ std::ifstream fichier(path, std::ios::in);
+
+        int *adr;
+        adr = tabMab;
+
+        if(fichier)
+        {
+        
+          while(fichier.eof()!=true){
+            fichier >> *tabMab; 
+            *tabMab = *(tabMab)++;
+            }
+        
+           fichier.close();
+        }
+
+        else
+           std::cerr << "Impossible d'ouvrir le fichier !" << std::endl;
+            
+           tabMab = adr;
+        if (!map.load("../res/tileSet.png", sf::Vector2u(32, 32), tabMab, 32, 26))
+            std::cout << "erreur de load"<< std::endl;
+    
+    }
+
+void Map::popMap(int mapID, Map *m) {
+    
+        switch(mapID)
+        {
+            case 1:
+            m->loadMap("../res/map_Init");
+            break;
+            
+            case 2:
+            m->loadMap("../res/Map_Dungeon");
+            break;
+            
+            default:
+            m->loadMap("../res/Map_Battle");
+            break;
+        }
+    }
+
+bool Map::blockedTile(int x, int y) {
+    if (!tabMab) {
+        // tiles is uninitialized
+        return 0;
+    }
+    
+    if (!tabMab[x]) {
+        return 1;
+    }
+    return 0;
 }

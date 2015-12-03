@@ -1,11 +1,15 @@
 #ifndef TILEMAP_H
 #define TILEMAP_H
+
 class TileMap : public sf::Drawable, public sf::Transformable
 {
 public:
 
-    bool load(const std::string& tileset, sf::Vector2u tileSize,const char* tiles, unsigned int width, unsigned int height)
+    bool load(const std::string& tileset, sf::Vector2u tileSize,int* tiles, unsigned int width, unsigned int height)
     {
+
+        std::cout << "adresse recu : " << tiles << '\n'; 
+        std::cout << "verification du tableau : " << *tiles << '\n'; 
         // load the tileset texture
         if (!m_tileset.loadFromFile(tileset))
             return false;
@@ -40,7 +44,7 @@ public:
                 quad[2].texCoords = sf::Vector2f((tu + 1) * tileSize.x, (tv + 1) * tileSize.y);
                 quad[3].texCoords = sf::Vector2f(tu * tileSize.x, (tv + 1) * tileSize.y);
             }
-
+            //free(tiles);
         return true;
     }
 
@@ -61,5 +65,4 @@ private:
     sf::VertexArray m_vertices;
     sf::Texture m_tileset;
 };
-
 #endif

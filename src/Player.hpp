@@ -3,14 +3,15 @@
 
 #include "Entity.hpp"
 #include "TileMap.hpp"
-
-#define NUMBER_OF_TILE 30
+#include "Input.hpp"
+#include "State.hpp"
 
 class Player : public TileMap {
 
 public:
 		
 	Player();
+    Player(int i, int j, std::string s);
 	~Player();
     
     // les différentes directions des personnages
@@ -24,12 +25,13 @@ public:
     };
     
     TileMap getTileMap();
-    void changeCharacterSpriteDirection(int i);
-    void moveCharacterSprite (Directions direction);
-    
+    void moveCharacterSprite(Input *playerInput);
+    void moveCharacterSprite_auto(int i);
+    void moveIA(bool stop);
 private:
     
     TileMap characterMap;
-    char tileID[1];
+    int tileID[1];
+    
 };
 #endif

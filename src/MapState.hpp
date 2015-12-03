@@ -16,13 +16,16 @@ class MapState : public State {
 		void popMap();
 		void changeMap(Map *map);
 
+		// push BattleState on top of state stack
+		// and return the new BattleState on top
+		//BattleState *enterBattle(int battleID);
 	private:
-		// operations
-		void update();
-
 		// pause/unpause menu
 		void pause();
 		void unpause();
+
+		void update(){}
+		void render(){}
 
 		// head and tail of linked list of maps
 		// the linked list is treated like a stack

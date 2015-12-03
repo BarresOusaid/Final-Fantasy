@@ -3,7 +3,7 @@
 
 Entity::Entity() {
     
-    twenty.loadFromFile("../Final-Fantasy/Final-Mystic-Quest/Final-Mystic-Quest/Ferrum.ttf");
+    //twenty.loadFromFile("../Final-Fantasy/Final-Mystic-Quest/Final-Mystic-Quest/Ferrum.ttf");
     
     // tous les entités ont un niveau initiale à 5 
     attributes[LEVEL]=5;
@@ -63,6 +63,14 @@ void Entity::setTarget(int target) {
 	
 	turn.target = target;
 	
+}
+
+void Entity::setName(std::string n){
+	name =n;
+}
+
+std::string Entity::getName() const{
+	return name;
 }
 
 void Entity::attack(int target) {

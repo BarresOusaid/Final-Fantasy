@@ -1,20 +1,17 @@
 #include "StateManager.hpp"
 
+
 StateManager::StateManager() {
-	
-	head=0;
-	tail=0;
-	
+	head = 0;
+	tail = 0;
 }
 
 StateManager::~StateManager() {
-	
-	popAll();	
-
+	popAll();
 }
 
 void StateManager::pushState(State *state) {
-	// affiche et initialise un nouvel état
+	// push and initialize the new state
 	if (tail) {
 		tail->pauseState();
 		tail->setNextState(state);
@@ -25,7 +22,7 @@ void StateManager::pushState(State *state) {
 }
 
 void StateManager::popState() {
-	// nettoie un état
+	// cleanup and pop current state
 	if (tail) {
 		State *toPop = tail;
 		tail = tail->getPreviousState();
@@ -52,6 +49,7 @@ void StateManager::popAll() {
 		popState();
 	}
 }
+
 void StateManager::process(sf::Event &event) {
 	tail->processState(event);
 }
@@ -59,12 +57,25 @@ void StateManager::process(sf::Event &event) {
 void StateManager::update() {
 	tail->updateState();
 }
+/*
+void StateManager::render(int width, int height) {
+	// reset scene
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glLoadIdentity();
+	glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
 
-/*void StateManager::startGame() {
+	// render state
+	tail->renderState(width, height);
+
+	// swap buffers
+	SDL_GL_SwapBuffers();
+}
+*/
+void StateManager::startGame() {
 	popAll();	// pop all current states
 
 	// put party on world map
 	MapState *ms = new MapState();
 	pushState(ms);
-	ms->pushMap(new World());
-}*/
+	ms->pushMap(new Map());
+}

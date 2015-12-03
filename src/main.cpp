@@ -1,3 +1,4 @@
+
 //
 // Disclamer:
 // ----------
@@ -19,205 +20,93 @@
 #include <iostream>
 #include "Player.hpp"
 #include "TileMap.hpp"
+#include "Map.hpp"
+#include "Input.hpp"
+#include "CollisionManager.hpp"
+
 
 
 // Here is a small helper for you ! Have a look.
-
-
 using namespace sf;
 using namespace std;
 
 
+
 int main(int, char const**)
 {
-    /////////////// Movement key identifier ///////////////
-    int i_down = 0;
-    int i_up = 0;
-    int i_left = 0;
-    int i_right = 0;
-    int directionID = 0;
+    
     RenderWindow window(sf::VideoMode(1000, 800, 32), "SFML window", Style::Default);
     Time time;
     Clock clock;
-    Player player;
-    player.getTileMap().setPosition(200, 200);
-    // create the tilemap from the level definition
-    int level[] = {0};
-    View view(sf::FloatRect(0, 0, 500, 500));
-    
-    window.setView(view);
-    window.setFramerateLimit(60);
-    
-    /////////////// Load a Sprite ///////////////
-    Sprite sprite;
-    /////////////////////////////////////////////
-    
-    /////////////// Load a texture ///////////////
-    Texture *texture = new Texture;
-    /////////////// Loading Village image ///////////////
-    /*if (!texture.loadFromFile("../res/Village/Mystic_Quest_village_1.png"))
-    {
-        return EXIT_FAILURE;
-    }*/
-    /////////////// Setting Smootness for texture ///////////////
-    texture->setSmooth(true);
-    /////////////////////////////////////////////////////////////
-    
-    /////////////// Assigning Spirite to texture ///////////////
-    //sprite.setTexture(texture);
-    ////////////////////////////////////////////////////////////
-    
-    /////////////// Setting Sprite color ///////////////
-    //sprite.setColor(Color(0, 100, 255));
-    ////////////////////////////////////////////////////
-    
-    /////////////// Scaling Sprite ///////////////
-    //sprite.setScale((Vector2f(1, 1)));
-    /////////////// Create a graphical text to display ///////////////
-    /*Font font;
-    if (!font.loadFromFile("../res/Songs/Ferrum.ttf"))
-    {
-        return EXIT_FAILURE;
-    }*/
-    /*Text text("Final Mystic Quest", font, 50);
-    text.setColor(Color::Black);*/
-    
-    // Load a music to play
-    Music music;
-    if (!music.openFromFile("../res/Songs/Main_Theme_FF7.ogg")) {
-        return EXIT_FAILURE;
-    }
-    
-    // Play the music
-    music.play();
-    
-    // Start the game loop
+    Player *player = new Player();
+    Player *second = new Player(2,2,"Hero");
+    //MapState *mapstate = new MapState();
+    Input *input = new Input();
+    /*Enemy enemy;
+    enemy.init("Battle");*/
+
+    Map *map = new Map();
+    /*View view(sf::FloatRect(0, 0, 1000, 800));
+    window.setView(view);*/
     while (window.isOpen())
     {	
-		texture->loadFromFile("../res/Village/Mystic_Quest_village_1.png");
-		sprite.setTexture(*texture);
-		cout << player.getTileMap().getPosition().x <<" "<< player.getTileMap().getPosition().y << endl;
-		if(((player.getTileMap().getPosition().x) >= 107) && ((player.getTileMap().getPosition().x) <= 109)
-		 && (player.getTileMap().getPosition().y >= 299)&&(player.getTileMap().getPosition().y <= 301))
-		{
-			//texture.loadFromFile("../res/Village/Black_Texture.png");
-			texture->loadFromFile("../res/Dungeon/Bone_dungeon/Mystic_Quest_bone_dungeon_1.png");
-			//music.openFromFile("../res/Songs/City_of_wind.ogg");
-		}		
+        //map->init(player, input);
+        map->init(second, input);
+        map->popMap(1, map);
+        time = clock.getElapsedTime();
+        if(time.asSeconds() >= 3)
+        {
+            map -> popMap(2,map);
+        }
+        int xPos, yPos;
+        xPos=player->getTileMap().getPosition().x;
+        yPos=player->getTileMap().getPosition().y;
+       
+        cout <<"J1:"<< xPos <<" "<< yPos << endl;
+        //cout <<"J2:"<< second->getTileMap().getPosition().x <<" "<< second->getTileMap().getPosition().y << endl;
+        cout <<"Map:"<< map->blockedTile(xPos, yPos) << endl;
         // Process events
         sf::Event event;
         while (window.pollEvent(event))
         {
-            switch (directionID)
-            {
-                case 1:
-                player.changeCharacterSpriteDirection(1);
-                    break;
-                    
-                case 2:
-                player.changeCharacterSpriteDirection(10);
-                    break;
+            input->pollInput(event);
             
-                case 3:
-                player.changeCharacterSpriteDirection(4);
-                    break;
-                    
-                case 4:
-                player.changeCharacterSpriteDirection(7);
-                    break;
-        
-                default:
-                player.changeCharacterSpriteDirection(1);
-                    break;
-            }
-          
-            
-            // Close window: exit
-            switch (event.type)
+            //second->moveCharacterSprite(input);
+            if(map->blockedTile(xPos, yPos))
             {
-                case Event::KeyPressed:
-                    switch (event.key.code)
-                    {
-                        case sf::Keyboard::Down:
-                            i_down++;
-                            directionID = 1;
-                            if(i_down%2 == 0)
-                            {
-                                player.changeCharacterSpriteDirection(0);
-                                player.moveCharacterSprite(Player::SOUTH);
-                                //texture.loadFromFile("../res/Dungeon/Bone_dungeon/Mystic_Quest_bone_dungeon_1.png");
-                                //sprite.setScale((Vector2f(1, 1)));
-                            }
-                            if(i_down%2 == 1)
-                            {
-                                player.changeCharacterSpriteDirection(2);
-                                player.moveCharacterSprite(Player::SOUTH);
-                            }
-                                break;
-                        
-                        case sf::Keyboard::Up:
-                            i_up++;
-                            directionID = 2;
-                            if(i_up % 2 == 0)
-                            {
-                                player.changeCharacterSpriteDirection(9);
-                                player.moveCharacterSprite(Player::NORTH);
-                            }
-                            if(i_up % 2 == 1)
-                            {
-                                player.changeCharacterSpriteDirection(11);
-                                player.moveCharacterSprite(Player::NORTH);
-                            }
-                                break;
-                        
-                        case sf::Keyboard::Left:
-                            i_left++;
-                            directionID = 3;
-                            if(i_left % 2 == 0)
-                            {
-                                player.changeCharacterSpriteDirection(3);
-                                player.moveCharacterSprite(Player::WEST);
-                            }
-                            if(i_left % 2 == 1)
-                            {
-                                player.changeCharacterSpriteDirection(5);
-                                player.moveCharacterSprite(Player::WEST);
-                            }
-                                break;
-                        
-                        case sf::Keyboard::Right:
-                            i_right++;
-                            directionID = 4;
-                            if(i_right % 2 == 0)
-                            {
-                                player.changeCharacterSpriteDirection(6);
-                                player.moveCharacterSprite(Player::EAST);
-                            }
-                            if(i_right % 2 == 1)
-                            {
-                                player.changeCharacterSpriteDirection(8);
-                                player.moveCharacterSprite(Player::EAST);
-                            }
-                                break;
-                    }
-                        break;
-                    
-                case Event::Closed:
-                    window.close();
-                        break;
-                    
+                player->moveCharacterSprite(input);
             }
+            /*if(CollisionManager::collidesWithPlayer(player, second)==1)
+            {
+                 second->moveCharacterSprite_auto(3);
+            }
+            if(CollisionManager::collidesWithMap(player, map)==1 && player->getPosition().y==map->getMap().getPosition().y)
+            {
+                player->moveCharacterSprite_auto(2);
+            }
+            if(CollisionManager::collidesWithMap(player, map)==1 && player->getPosition().y==map->getMap().getPosition().y+800)
+            {
+                player->moveCharacterSprite_auto(1);
+            }*/
+            
+            
+            
+            if(event.type == Event::Closed)
+            {
+                window.close();
+            }	
         }
-        
         
         // Clear screen
         window.clear();
         
         // Draw the sprite
-        window.draw(sprite);
+        window.draw(map->getMap());
         
         // Draw the string
-        window.draw(player.getTileMap());
+        window.draw(player->getTileMap());
+        window.draw(second->getTileMap());
+
         
         // Update the window
         window.display();
