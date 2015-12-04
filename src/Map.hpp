@@ -19,28 +19,22 @@ class Map {
 		Map();
 		virtual ~Map();
 
-
-
 		// initialisation de la map
-		void init(Player *player, Input *input, MapState *ms);
-		void init(Player *player, Input *input);
+		void init(Player *player, Input *input);	 
 		void loadMap(std::string path);
 		TileMap getMap();
 		Player getPlayer();
 		void popMap(int mapID, Map *m);
-
 		Map *getNext() { return next; }
 		Map *getPrev() { return prev; }
 		void setNext(Map *map) { next = map; }
 		void setPrev(Map *map) { prev = map; }
-
-		// pause/unpause map
-		void updateMap();
-		void pauseMap();
-		void unpauseMap();
-
-		bool blockedTile(int x, int y);
-
+        void updateMap();
+        void pauseMap();
+        void unpauseMap();
+        bool blockedTile(int x);
+        int TileNumberConversion(int x,int y);  
+        int blockedTileID(int x);
     
 	protected:
 		
@@ -53,10 +47,10 @@ class Map {
         int mapWidth, mapHeight, tileSize;
         int *tabMab = (int*) std::malloc(832*sizeof(int));
     
-    void init(){};
-    void update(){};
-    void pause(){};
-    void unpause(){};
+    /*virtual void init()=0;
+    virtual void update()=0;
+    virtual void pause()=0;
+    virtual void unpause()=0;*/
 
 };
 

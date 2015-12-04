@@ -23,13 +23,6 @@ Map::~Map() {
     }
 }
 
-void Map::init(Player *player, Input *input, MapState *ms){
-    myPlayer = player;
-    myInput = input;
-    ms = ms;
-    //popMap(2, this);
-}
-
 void Map::init(Player *player, Input *input){
     myPlayer = player;
     myInput = input;
@@ -37,7 +30,8 @@ void Map::init(Player *player, Input *input){
     //map.setScale(2, 2);
 }
 
-void Map::updateMap()
+
+/*void Map::updateMap()
 {
     update();
 }
@@ -50,7 +44,7 @@ void Map::pauseMap()
 void Map::unpauseMap()
 {
     unpause();
-}
+}*/
 
 TileMap Map::getMap(){
     return map;
@@ -105,14 +99,16 @@ void Map::popMap(int mapID, Map *m) {
         }
     }
 
-bool Map::blockedTile(int x, int y) {
-    if (!tabMab) {
-        // tiles is uninitialized
-        return 0;
-    }
+int Map::blockedTileID(int x) {
     
-    if (!tabMab[x]) {
-        return 1;
-    }
-    return 0;
+    return tabMab[x];
+    
+}
+
+int Map::TileNumberConversion(int x,int y)
+{
+    int tileNumberx, tileNumbery;
+    tileNumberx=x/32;
+    tileNumbery=y/32;
+    return (32*tileNumbery+tileNumberx);
 }

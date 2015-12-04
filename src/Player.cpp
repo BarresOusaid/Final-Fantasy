@@ -12,8 +12,8 @@ Player::Player() {
     
     tileID[0] = {1};
     characterMap.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), tileID, 1, 1);
-    characterMap.setPosition(200, 200);
-    characterMap.setScale(2, 2);
+    characterMap.setPosition(224, 224);
+    //characterMap.setScale(2, 2);
 
 }
 
@@ -29,7 +29,7 @@ Player::Player(int i, int j, std::string s) {
         characterMap.load("../res/Enemies/Enemies.png", sf::Vector2u(35, 35), tileID, 1, 1);
     }
     characterMap.setPosition(i*200, j*200);
-    characterMap.setScale(2, 2);
+    //characterMap.setScale(2, 2);
 }
 
 Player::~Player() {
@@ -51,7 +51,7 @@ void Player::moveCharacterSprite(Input *playerInput)
 			tileID[0] = {11};
 		}
         
-            characterMap.move(0, -10);
+            characterMap.move(0, -32);
         
 	}
    
@@ -68,7 +68,7 @@ void Player::moveCharacterSprite(Input *playerInput)
 			tileID[0] = {2};
 		}
         
-            characterMap.move(0, 10);
+            characterMap.move(0, 32);
         
 	}
 	
@@ -85,7 +85,7 @@ void Player::moveCharacterSprite(Input *playerInput)
 			tileID[0] = {5};
 		}
        
-            characterMap.move(-10, 0);
+            characterMap.move(-32, 0);
         
 	}
 	
@@ -103,7 +103,7 @@ void Player::moveCharacterSprite(Input *playerInput)
 		}
         
         
-            characterMap.move(10, 0);
+            characterMap.move(32, 0);
         
 	}
 }
@@ -114,56 +114,59 @@ void Player::moveCharacterSprite_auto(int i)
     
         if(i==1)
         {i_up++;
-            if(i_up%2==0)
-            {
-                 tileID[0] = {9};
-            }
-             if(i_up%2==1)
-            {
-                tileID[0] = {11};
-            }
-        characterMap.move(0, -10);
+        if(i_up%2==0)
+        {
+            tileID[0] = {9};
+        }
+        if(i_up%2==1)
+        {
+            tileID[0] = {11};
+        }
+        characterMap.move(0, -16);
         }
     
         if(i==2)
         {i_down++;
-            if(i_down%2==0)
-            {
-                tileID[0] = {0};
-            }
-            if(i_down%2==1)
-            {
-                tileID[0] = {2};
-            }
-            characterMap.move(0, 10);
+        if(i_down%2==0)
+        {
+            tileID[0] = {0};
         }
-
+        if(i_down%2==1)
+        {
+            tileID[0] = {2};
+        }
+        characterMap.move(0, 16);
+        }
         if(i==3)
         {i_left++;
-            if(i_left%2==0)
-            {
-                tileID[0] = {3};
-            }
-            if(i_left%2==1)
-            {
-                tileID[0] = {5};
-            }
-            characterMap.move(-10, 0);
+        if(i_left%2==0)
+        {
+            tileID[0] = {3};
         }
-
+        if(i_left%2==1)
+        {
+            tileID[0] = {5};
+        }
+        characterMap.move(-16, 0);
+        }
         if(i==4)
         {i_right++;
-            if(i_right%2==0)
-            {
-                tileID[0] = {6};
-            }
-            if(i_right%2==1)
-            {
-                tileID[0] = {8};
-            }
-            characterMap.move(10, 0);
+        if(i_right%2==0)
+        {
+            tileID[0] = {6};
+        }
+        if(i_right%2==1)
+        {
+            tileID[0] = {8};
+        }
+        characterMap.move(16, 0);
+        }
+        if(i==5)
+        {
+            characterMap.move(0,0);
         }
 }
+
 
 
 
@@ -177,40 +180,5 @@ TileMap Player::getTileMap()
 	return playerInput;
 }*/
 
-void Player::moveIA(bool stop){
-    Input *in = new Input();
-    
-    if (stop){
-        in -> upPressed();
-        moveCharacterSprite(in);
-        if(stop){
-            in -> rightPressed();
-            moveCharacterSprite(in);
-            if(stop){
-                in -> leftPressed();
-                moveCharacterSprite(in);
-                if(stop){
-                    in -> downPressed();
-                    moveCharacterSprite(in);
-                }
-                else {
-                    in -> rightPressed();
-                    moveCharacterSprite(in);
-                }
-            }
-            else {
-                in -> downPressed();
-                moveCharacterSprite(in);
-            }
-        }
-        else {
-            in -> upPressed();
-            moveCharacterSprite(in);
-        }       
-    }
-    else {
-        in -> leftPressed();
-        moveCharacterSprite(in);
-    }
-}
+
 

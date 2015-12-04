@@ -27,7 +27,7 @@ public:
     TileMap getTileMap();
     void moveCharacterSprite(Input *playerInput);
     void moveCharacterSprite_auto(int i);
-    void moveIA(bool stop);
+    
 private:
     
     TileMap characterMap;

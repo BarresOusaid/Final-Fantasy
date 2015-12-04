@@ -18,7 +18,7 @@ bool CollisionManager::collidesWithPlayer(Player *player1, Player *player2)
     boundsx=player2->getTileMap().getPosition().x;
     boundsy=player2->getTileMap().getPosition().y;
     
-    if((boundx<=boundsx+50)&&(boundsx-50<=boundx)&&((boundy<=boundsy+60)&&(boundsy-60<=boundy)))
+    if((boundx<=boundsx+32)&&(boundsx-32<=boundx)&&((boundy<=boundsy+32)&&(boundsy-32<=boundy)))
     {
         return true;
     }
@@ -36,7 +36,7 @@ bool CollisionManager::collidesWithMap(Player *player, Map *map)
     boundmx=map->getMap().getPosition().x;
     boundmy=map->getMap().getPosition().y;
     
-    if((boundx==boundmx+1000)||(boundx=boundmx) || (boundy==boundmy+800)||(boundy==boundmy))
+    if((boundx==boundmx+32)||(boundx=boundmx) || (boundy==boundmy+32)||(boundy==boundmy))
     {
         return true;
     }
