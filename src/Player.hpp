@@ -14,20 +14,12 @@ public:
     Player(int i, int j, std::string s);
 	~Player();
     
-    // les différentes directions des personnages
-    enum Directions
-    {
-        NORTH,
-        EAST,
-        SOUTH,
-        WEST,
-        DIRECTIONS
-    };
-    
+
     TileMap getTileMap();
-    void moveCharacterSprite(Input *playerInput);
+    void moveCharacterSprite(DIRECTION::DIRECTION direct);
     void moveCharacterSprite_auto(int i);
-    
+    void moveCharacterSprite_IA();
+
 private:
     
     TileMap characterMap;

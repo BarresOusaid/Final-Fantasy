@@ -36,10 +36,10 @@ Player::~Player() {
 
 }
 
-void Player::moveCharacterSprite(Input *playerInput)
+void Player::moveCharacterSprite(DIRECTION::DIRECTION direct)
 {
 	characterMap.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), tileID, 1, 1);
-	if(playerInput->upPressed()==1)
+	if(direct == DIRECTION::HAUT)
 	{
 		i_up++;
 		if(i_up%2==0)
@@ -55,7 +55,7 @@ void Player::moveCharacterSprite(Input *playerInput)
         
 	}
    
-	if(playerInput->downPressed()==1)
+	if(direct == DIRECTION::BAS)
 	{
       
 		i_down++;
@@ -72,7 +72,7 @@ void Player::moveCharacterSprite(Input *playerInput)
         
 	}
 	
-	if(playerInput->leftPressed()==1)
+	if(direct == DIRECTION::GAUCHE)
 	{
        
 		i_left++;
@@ -89,7 +89,7 @@ void Player::moveCharacterSprite(Input *playerInput)
         
 	}
 	
-	if(playerInput->rightPressed()==1)
+	if(direct == DIRECTION::DROITE)
 	{
       
 		i_right++;
@@ -169,6 +169,10 @@ void Player::moveCharacterSprite_auto(int i)
 
 
 
+void Player::moveCharacterSprite_IA()
+{
+   
+}
 
 TileMap Player::getTileMap()
 {

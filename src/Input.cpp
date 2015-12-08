@@ -70,7 +70,14 @@ bool Input::rightPressed()
 	return right; 
 }
 
-bool Input::pollInput(sf::Event &event) {
+DIRECTION::DIRECTION Input::getDirection(){
+	return direction;
+}
+
+
+
+//faire un retour de  direction 
+/*bool Input::pollInput(sf::Event &event) {
 	
 	switch(event.type)
 	{
@@ -160,7 +167,7 @@ bool Input::pollInput(sf::Event &event) {
 	}
 	return true;
 }
-
+*/
 void Input::resetAllInput() {
 	
 	tab = 0;
@@ -187,5 +194,95 @@ bool Input::anyKey() {
 	return false;
 }			
 		
+DIRECTION::DIRECTION Input::pollInput(sf::Event &event) {
+	
+	switch(event.type)
+	{
+		case sf::Event::KeyPressed:
+			for (char ch = ' '; ch <= '~'; ch++) 
+			{
+				// i only care about character keys
+				if (event.key.code == ch) {
+					// the first 32 ASCII keys are junk
+					keys[ch - 32] = 1;
+				}
+			}
+		
+			switch(event.key.code)
+			{
+				case sf::Keyboard::Tab:
+				tab=1;
+					break;
+				
+				case sf::Keyboard::BackSpace:
+				backspace=1;
+					break;
+				
+				case sf::Keyboard::Return:
+				enter=1;
+					break;
+				
+				case sf::Keyboard::Up:
+				direction = DIRECTION::HAUT;
+					break;
+				
+				case sf::Keyboard::Down:
+				direction = DIRECTION::BAS;
+					break;
+				
+				case sf::Keyboard::Left:
+				direction = DIRECTION::GAUCHE;
+					break;
+				
+				case sf::Keyboard::Right:
+				direction = DIRECTION::DROITE;
+					break;
+			}	 	
+			break;
+			
+		case sf::Event::KeyReleased:
+			for (char ch = ' '; ch <= '~'; ch++) 
+			{
+				// i only care about character keys
+				if (event.key.code == ch) {
+					// the first 32 ASCII keys are junk
+					keys[ch - 32] = 0;
+				}
+			}
+		
+			switch(event.key.code)
+			{
+				case sf::Keyboard::Tab:
+				tab=0;
+					break;
+				
+				case sf::Keyboard::BackSpace:
+				backspace=0;
+					break;
+				
+				case sf::Keyboard::Return:
+				enter=0;
+					break;
+				
+				case sf::Keyboard::Up:
+				direction = DIRECTION::NONE;
+					break;
+				
+				case sf::Keyboard::Down:
+				direction = DIRECTION::NONE;
+					break;
+				
+				case sf::Keyboard::Left:
+				direction = DIRECTION::NONE;
+					break;
+				
+				case sf::Keyboard::Right:
+				direction = DIRECTION::NONE;
+					break;
+			}	 	
+			break;
+	}
+	return DIRECTION::NONE;
+}
 
 					

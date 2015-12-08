@@ -73,9 +73,15 @@ int main(int, char const**)
             input->pollInput(event);
             
             //second->moveCharacterSprite(input);
-            if(map->blockedTileID(map->TileNumberConversion(xPos, yPos))==0 || map->blockedTileID(map->TileNumberConversion(xPos, yPos))==102 || map->blockedTileID(map->TileNumberConversion(xPos, yPos))==111 || map->blockedTileID(map->TileNumberConversion(xPos, yPos))==2)
+            if(map->blockedTileID(map->TileNumberConversion(xPos, yPos))==0 
+                || map->blockedTileID(map->TileNumberConversion(xPos, yPos))==102 
+                || map->blockedTileID(map->TileNumberConversion(xPos, yPos))==111 
+                || map->blockedTileID(map->TileNumberConversion(xPos, yPos))==2)
             {
-                player->moveCharacterSprite(input);
+                player->moveCharacterSprite(input->getDirection());
+            }
+            else{
+                player->moveCharacterSprite(DIRECTION::NONE);
             }
             
             if(CollisionManager::collidesWithPlayer(player, second)==1)

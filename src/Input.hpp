@@ -5,13 +5,14 @@
 #include <iostream>
 #include <SFML/Graphics.hpp> 
 #include <SFML/Window.hpp>
+#include "Direction.hpp"
 
 class Input {
 	
 public :
 	Input();
 	~Input();
-	bool pollInput(sf::Event &event);
+	DIRECTION::DIRECTION pollInput(sf::Event &event);
 	
 	void resetAllInput();
 	
@@ -36,6 +37,9 @@ public :
 	bool downPressed(); 
 	bool leftPressed(); 
 	bool rightPressed();
+
+
+	DIRECTION::DIRECTION getDirection();
 	
 	// vérifie si une touche à été appuyée
 	bool anyKey(); 
@@ -47,7 +51,8 @@ private:
 	bool keys[96];				// character keys
 	bool up, down, left, right; // arrow keys
 	bool tab, backspace, enter; // tab, backspace, enter keys
-	
+	DIRECTION::DIRECTION direction;
+
 };	
 
 #endif
