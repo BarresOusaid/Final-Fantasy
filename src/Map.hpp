@@ -33,8 +33,10 @@ class Map {
         void pauseMap();
         void unpauseMap();
         bool blockedTile(int x);
-        int TileNumberConversion(int x,int y);  
+        int TileNumberConversion(int x,int y);
         int blockedTileID(int x);
+
+        bool isEmpty(int x, int y);
     
 	protected:
 		

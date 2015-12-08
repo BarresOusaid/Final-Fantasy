@@ -1,10 +1,14 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+#include <iostream>
+
 #include "Entity.hpp"
 #include "TileMap.hpp"
 #include "Input.hpp"
-#include "State.hpp"
+#include "Map.hpp"
+
+class Map;  
 
 class Player : public TileMap {
 
@@ -18,7 +22,7 @@ public:
     TileMap getTileMap();
     void moveCharacterSprite(DIRECTION::DIRECTION direct);
     void moveCharacterSprite_auto(int i);
-    void moveCharacterSprite_IA();
+    void moveCharacterSprite_IA(Map* map);
 
 private:
     

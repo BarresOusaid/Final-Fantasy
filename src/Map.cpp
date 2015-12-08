@@ -112,3 +112,18 @@ int Map::TileNumberConversion(int x,int y)
     tileNumbery=y/32;
     return (32*tileNumbery+tileNumberx);
 }
+
+bool Map::isEmpty(int x, int y){
+    if( blockedTileID(TileNumberConversion(x, y))==0 ||
+        blockedTileID(TileNumberConversion(x, y))==102 ||
+        blockedTileID(TileNumberConversion(x, y))==111 ||
+        blockedTileID(TileNumberConversion(x, y))==2 ||
+        blockedTileID(TileNumberConversion(x, y))==231)
+    {
+        return true;
+    }
+
+    else {
+        return false;
+    }
+}

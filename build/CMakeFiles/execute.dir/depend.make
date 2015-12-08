@@ -548,6 +548,8 @@ CMakeFiles/execute.dir/src/MapState.cpp.o: /usr/local/include/SFML/Window/Window
 CMakeFiles/execute.dir/src/Player.cpp.o: ../src/Direction.hpp
 CMakeFiles/execute.dir/src/Player.cpp.o: ../src/Entity.hpp
 CMakeFiles/execute.dir/src/Player.cpp.o: ../src/Input.hpp
+CMakeFiles/execute.dir/src/Player.cpp.o: ../src/Map.hpp
+CMakeFiles/execute.dir/src/Player.cpp.o: ../src/MapState.hpp
 CMakeFiles/execute.dir/src/Player.cpp.o: ../src/Player.cpp
 CMakeFiles/execute.dir/src/Player.cpp.o: ../src/Player.hpp
 CMakeFiles/execute.dir/src/Player.cpp.o: ../src/State.hpp
@@ -642,6 +644,8 @@ CMakeFiles/execute.dir/src/Player.cpp.o: /usr/local/include/SFML/Window/WindowSt
 CMakeFiles/execute.dir/src/State.cpp.o: ../src/Direction.hpp
 CMakeFiles/execute.dir/src/State.cpp.o: ../src/Entity.hpp
 CMakeFiles/execute.dir/src/State.cpp.o: ../src/Input.hpp
+CMakeFiles/execute.dir/src/State.cpp.o: ../src/Map.hpp
+CMakeFiles/execute.dir/src/State.cpp.o: ../src/MapState.hpp
 CMakeFiles/execute.dir/src/State.cpp.o: ../src/Player.hpp
 CMakeFiles/execute.dir/src/State.cpp.o: ../src/State.cpp
 CMakeFiles/execute.dir/src/State.cpp.o: ../src/State.hpp

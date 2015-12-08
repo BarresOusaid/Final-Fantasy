@@ -169,8 +169,20 @@ void Player::moveCharacterSprite_auto(int i)
 
 
 
-void Player::moveCharacterSprite_IA()
+void Player::moveCharacterSprite_IA(Map* map)
 {
+     if(map->isEmpty(characterMap.getPosition().x, characterMap.getPosition().y)){
+            std::cout <<"mon truc ne  marche pas"<< std::endl;
+            moveCharacterSprite(DIRECTION::GAUCHE); 
+            moveCharacterSprite(DIRECTION::HAUT);
+
+   }
+   
+   std::cout <<"yIA "<< map->getPlayer().getTileMap().getPosition().x<< std::endl;
+   std::cout <<"xIA "<< map->getPlayer().getTileMap().getPosition().y<< std::endl;
+   std::cout <<"test de if "<< map->isEmpty(characterMap.getPosition().x, characterMap.getPosition().y) << std::endl;
+   
+
    
 }
 

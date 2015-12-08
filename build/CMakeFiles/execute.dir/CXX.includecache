@@ -70,15 +70,21 @@ State.hpp
 Map.hpp
 /home/ous/Documents/github/Final-Fantasy/src/Map.hpp
 
+/home/ous/Documents/github/Final-Fantasy/src/Player.cpp
+Player.hpp
 /home/ous/Documents/github/Final-Fantasy/src/Player.hpp
+
+/home/ous/Documents/github/Final-Fantasy/src/Player.hpp
+iostream
+-
 Entity.hpp
 /home/ous/Documents/github/Final-Fantasy/src/Entity.hpp
 TileMap.hpp
 /home/ous/Documents/github/Final-Fantasy/src/TileMap.hpp
 Input.hpp
 /home/ous/Documents/github/Final-Fantasy/src/Input.hpp
-State.hpp
-/home/ous/Documents/github/Final-Fantasy/src/State.hpp
+Map.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Map.hpp
 
 /home/ous/Documents/github/Final-Fantasy/src/State.hpp
 Player.hpp

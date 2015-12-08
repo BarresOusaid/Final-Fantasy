@@ -51,59 +51,26 @@ int main(int, char const**)
     while (window.isOpen())
     {	
         //map->init(player, input);
-        map->init(second, input);
+        map->init(player, input);
         map->popMap(1, map);
-        time = clock.getElapsedTime();
-        /*if(time.asSeconds() >= 3)
-        {
-            map -> popMap(2,map);
-        }*/
-        int xPos, yPos;
-        xPos=player->getTileMap().getPosition().x;
-        yPos=player->getTileMap().getPosition().y;
-       
-        cout <<"J1:"<< map->TileNumberConversion(xPos, yPos)<< endl;
-        //cout <<"J2:"<< second->getTileMap().getPosition().x <<" "<< second->getTileMap().getPosition().y << endl;
-        //map->blockedTile(xPos);
-        //cout << "tile id " << map->blockedTileNumber(38) << endl;
-        // Process events
+
         sf::Event event;
+        
+        player -> moveCharacterSprite_IA(map);
+        
         while (window.pollEvent(event))
         {
             input->pollInput(event);
             
             //second->moveCharacterSprite(input);
-            if(map->blockedTileID(map->TileNumberConversion(xPos, yPos))==0 
-                || map->blockedTileID(map->TileNumberConversion(xPos, yPos))==102 
-                || map->blockedTileID(map->TileNumberConversion(xPos, yPos))==111 
-                || map->blockedTileID(map->TileNumberConversion(xPos, yPos))==2)
-            {
-                player->moveCharacterSprite(input->getDirection());
-            }
-            else{
-                player->moveCharacterSprite(DIRECTION::NONE);
-            }
+            player -> moveCharacterSprite(input -> getDirection());
+           // player -> moveCharacterSprite_IA(map);
             
             if(CollisionManager::collidesWithPlayer(player, second)==1)
             {
                 second->moveCharacterSprite_auto(3);
             }
-            
-            
-            
-                
-            
-            /*if(CollisionManager::collidesWithMap(player, map)==1 && player->getPosition().y==map->getMap().getPosition().y)
-            {
-                player->moveCharacterSprite_auto(2);
-            }
-            if(CollisionManager::collidesWithMap(player, map)==1 && player->getPosition().y==map->getMap().getPosition().y+800)
-            {
-                player->moveCharacterSprite_auto(1);
-            
-            */
-            
-            
+                        
             if(event.type == Event::Closed)
             {
                 window.close();

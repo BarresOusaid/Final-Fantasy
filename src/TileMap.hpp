@@ -7,9 +7,6 @@ public:
 
     bool load(const std::string& tileset, sf::Vector2u tileSize,int* tiles, unsigned int width, unsigned int height)
     {
-
-        std::cout << "adresse recu : " << tiles << '\n'; 
-        std::cout << "verification du tableau : " << *tiles << '\n'; 
         // load the tileset texture
         if (!m_tileset.loadFromFile(tileset))
             return false;
