@@ -70,8 +70,12 @@ bool Input::rightPressed()
 	return right; 
 }
 
-DIRECTION::DIRECTION Input::getDirection(){
+DIRECTION Input::getDirection(){
 	return direction;
+}
+
+void Input::setDirection(DIRECTION direct){
+	direction = direct;
 }
 
 
@@ -194,7 +198,7 @@ bool Input::anyKey() {
 	return false;
 }			
 		
-DIRECTION::DIRECTION Input::pollInput(sf::Event &event) {
+DIRECTION Input::pollInput(sf::Event &event) {
 	
 	switch(event.type)
 	{
@@ -223,19 +227,23 @@ DIRECTION::DIRECTION Input::pollInput(sf::Event &event) {
 					break;
 				
 				case sf::Keyboard::Up:
-				direction = DIRECTION::HAUT;
+				direction = HAUT;
+				up=1;
 					break;
 				
 				case sf::Keyboard::Down:
-				direction = DIRECTION::BAS;
+				direction = BAS;
+				down=1;
 					break;
 				
 				case sf::Keyboard::Left:
-				direction = DIRECTION::GAUCHE;
+				direction = GAUCHE;
+				left=1;
 					break;
 				
 				case sf::Keyboard::Right:
-				direction = DIRECTION::DROITE;
+				direction = DROITE;
+				right=1;
 					break;
 			}	 	
 			break;
@@ -265,24 +273,28 @@ DIRECTION::DIRECTION Input::pollInput(sf::Event &event) {
 					break;
 				
 				case sf::Keyboard::Up:
-				direction = DIRECTION::NONE;
+				direction = NO;
+				up=0;
 					break;
 				
-				case sf::Keyboard::Down:
-				direction = DIRECTION::NONE;
+				case sf::Keyboard::Down: 
+				direction = NO;
+				down=0;		
 					break;
-				
+		
 				case sf::Keyboard::Left:
-				direction = DIRECTION::NONE;
+				direction = NO;
+				left=0;
 					break;
 				
 				case sf::Keyboard::Right:
-				direction = DIRECTION::NONE;
+				direction = NO;
+				right=0;
 					break;
 			}	 	
 			break;
 	}
-	return DIRECTION::NONE;
+	return NO;
 }
 
 					

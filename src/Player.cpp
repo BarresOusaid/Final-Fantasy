@@ -2,6 +2,7 @@
 
 
 using namespace sf;
+using namespace std;
 
 int i_down = 0;
 int i_up = 0;
@@ -36,10 +37,10 @@ Player::~Player() {
 
 }
 
-void Player::moveCharacterSprite(DIRECTION::DIRECTION direct)
+void Player::moveCharacterSprite(DIRECTION direct)
 {
 	characterMap.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), tileID, 1, 1);
-	if(direct == DIRECTION::HAUT)
+	if(direct == HAUT)
 	{
 		i_up++;
 		if(i_up%2==0)
@@ -50,12 +51,12 @@ void Player::moveCharacterSprite(DIRECTION::DIRECTION direct)
 		{
 			tileID[0] = {11};
 		}
-        
+			
             characterMap.move(0, -32);
         
 	}
    
-	if(direct == DIRECTION::BAS)
+	if(direct == BAS)
 	{
       
 		i_down++;
@@ -72,7 +73,7 @@ void Player::moveCharacterSprite(DIRECTION::DIRECTION direct)
         
 	}
 	
-	if(direct == DIRECTION::GAUCHE)
+	if(direct == GAUCHE)
 	{
        
 		i_left++;
@@ -89,7 +90,7 @@ void Player::moveCharacterSprite(DIRECTION::DIRECTION direct)
         
 	}
 	
-	if(direct == DIRECTION::DROITE)
+	if(direct == DROITE)
 	{
       
 		i_right++;
@@ -108,62 +109,32 @@ void Player::moveCharacterSprite(DIRECTION::DIRECTION direct)
 	}
 }
 
-void Player::moveCharacterSprite_auto(int i)
+
+
+void Player::moveCharacterSprite_auto(int i, int x, int y)
 {
     characterMap.load("../res/Characters/Benjamin.png", sf::Vector2u(32, 32), tileID, 1, 1);
     
         if(i==1)
-        {i_up++;
-        if(i_up%2==0)
         {
-            tileID[0] = {9};
-        }
-        if(i_up%2==1)
-        {
-            tileID[0] = {11};
-        }
-        characterMap.move(0, -16);
+        characterMap.move(0, -y);
         }
     
         if(i==2)
-        {i_down++;
-        if(i_down%2==0)
         {
-            tileID[0] = {0};
-        }
-        if(i_down%2==1)
-        {
-            tileID[0] = {2};
-        }
-        characterMap.move(0, 16);
+        characterMap.move(0, y);
         }
         if(i==3)
-        {i_left++;
-        if(i_left%2==0)
         {
-            tileID[0] = {3};
-        }
-        if(i_left%2==1)
-        {
-            tileID[0] = {5};
-        }
-        characterMap.move(-16, 0);
+        characterMap.move(-x, 0);
         }
         if(i==4)
-        {i_right++;
-        if(i_right%2==0)
         {
-            tileID[0] = {6};
-        }
-        if(i_right%2==1)
-        {
-            tileID[0] = {8};
-        }
-        characterMap.move(16, 0);
+        characterMap.move(x, 0);
         }
         if(i==5)
         {
-            characterMap.move(0,0);
+            characterMap.move(1,1);
         }
 }
 
@@ -171,18 +142,16 @@ void Player::moveCharacterSprite_auto(int i)
 
 void Player::moveCharacterSprite_IA(Map* map)
 {
-     if(map->isEmpty(characterMap.getPosition().x, characterMap.getPosition().y)){
-            std::cout <<"mon truc ne  marche pas"<< std::endl;
-            moveCharacterSprite(DIRECTION::GAUCHE); 
-            moveCharacterSprite(DIRECTION::HAUT);
-
-   }
+	if(map->isEmpty(characterMap.getPosition().x, characterMap.getPosition().y))
+	{
+		std::cout <<"mon truc ne  marche pas"<< std::endl;
+        moveCharacterSprite(DIRECTION::GAUCHE); 
+        moveCharacterSprite(DIRECTION::HAUT);
+	}
    
-   std::cout <<"yIA "<< map->getPlayer().getTileMap().getPosition().x<< std::endl;
-   std::cout <<"xIA "<< map->getPlayer().getTileMap().getPosition().y<< std::endl;
-   std::cout <<"test de if "<< map->isEmpty(characterMap.getPosition().x, characterMap.getPosition().y) << std::endl;
-   
-
+	std::cout <<"yIA "<< map->getPlayer().getTileMap().getPosition().x<< endl;
+	std::cout <<"xIA "<< map->getPlayer().getTileMap().getPosition().y<< endl;
+	std::cout <<"test de if "<< map->isEmpty(characterMap.getPosition().x, characterMap.getPosition().y) << std::endl;
    
 }
 

@@ -24,7 +24,7 @@ Entity::~Entity(){
 	
 }
 
-void Entity::setAttributes(Stats s, int val) {
+void Entity::setAttribute(Stats s, int val) {
 	
 	if(s >= LEVEL && s <= STATSCOUNT)
 	{
@@ -52,12 +52,12 @@ bool Entity::setStatus(unsigned int status) {
 	return 1;	// succés de mise en place de l'altération d'état
 
 }		
-	
+/*	
 void Entity::resetTurn() {
 	
 	turn.action = NONE;
 	
-}
+}*/ 
 
 void Entity::setTarget(int target) {
 	
@@ -69,7 +69,7 @@ void Entity::setName(std::string n){
 	name =n;
 }
 
-std::string Entity::getName() const{
+std::string Entity::getName(){
 	return name;
 }
 
@@ -85,7 +85,7 @@ int Entity::getSpriteDim() {
 	return spriteDim; 
 
 }
-
+/*
 void Entity::setTurn(Turn t) {
 	
 	turn = t;
@@ -95,4 +95,4 @@ Entity::Turn Entity::getTurn() const {
 	
 	return turn;
 
-}
+}*/

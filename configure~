@@ -1,9 +1,10 @@
 #!/bin/bash
 
 dia2code -t cpp -d src dia/Diagramme1.dia
-
-
+cp -f ./res/TileMap.h ./src
 mkdir -p build
 cd build
 
 cmake ..
+
+

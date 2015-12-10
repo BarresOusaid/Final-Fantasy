@@ -27,20 +27,19 @@ bool CollisionManager::collidesWithPlayer(Player *player1, Player *player2)
     return false;
 }
 
-bool CollisionManager::collidesWithMap(Player *player, Map *map)
+bool CollisionManager::collidesWithMap(Map *map)
 {
-    int boundx, boundy, boundmx, boundmy;
-    
-    boundx=player->getTileMap().getPosition().x;
-    boundy=player->getTileMap().getPosition().y;
-    boundmx=map->getMap().getPosition().x;
-    boundmy=map->getMap().getPosition().y;
-    
-    if((boundx==boundmx+32)||(boundx=boundmx) || (boundy==boundmy+32)||(boundy==boundmy))
-    {
-        return true;
-    }
-    else
-        
-        return false;
-}
+	if(map->autorisedTileID(map->TileNumberConversion(map->getPlayer().getTileMap().getPosition().x, map->getPlayer().getTileMap().getPosition().y))==2
+    || map->autorisedTileID(map->TileNumberConversion(map->getPlayer().getTileMap().getPosition().x, map->getPlayer().getTileMap().getPosition().y))==111
+    || map->autorisedTileID(map->TileNumberConversion(map->getPlayer().getTileMap().getPosition().x, map->getPlayer().getTileMap().getPosition().y))==107
+    || map->autorisedTileID(map->TileNumberConversion(map->getPlayer().getTileMap().getPosition().x, map->getPlayer().getTileMap().getPosition().y))==106
+    || map->autorisedTileID(map->TileNumberConversion(map->getPlayer().getTileMap().getPosition().x, map->getPlayer().getTileMap().getPosition().y))==0)
+	{
+		return true;
+	}
+
+	else return false;
+}		    
+
+
+

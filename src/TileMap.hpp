@@ -1,5 +1,8 @@
-#ifndef TILEMAP_H
-#define TILEMAP_H
+#ifndef TILEMAP_HPP
+#define TILEMAP_HPP
+
+#include <SFML/Audio.hpp>
+#include <SFML/Graphics.hpp>
 
 class TileMap : public sf::Drawable, public sf::Transformable
 {

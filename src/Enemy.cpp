@@ -46,10 +46,7 @@ void Enemy::render(int x, int y) {
 		return;	// no enemy to draw
 	}
 
-	renderx = x;
-	rendery = y;
-
-	enemy.move(renderx, rendery);
+	enemy.move(x, y);
 
 }
 

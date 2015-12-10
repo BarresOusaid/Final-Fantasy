@@ -1,10 +1,16 @@
 #include "Map.hpp"
 
+#include <string>
+#include <fstream>
+
+using namespace std;
+using namespace sf;
+
+
 Map::Map() {
     
     myInput=0;
     myPlayer=0;
-    myMapState=0;
     next=0;
     prev=0;
     tiles=0;
@@ -26,25 +32,10 @@ Map::~Map() {
 void Map::init(Player *player, Input *input){
     myPlayer = player;
     myInput = input;
-    //myMapState = ms;
     //map.setScale(2, 2);
 }
 
 
-/*void Map::updateMap()
-{
-    update();
-}
-
-void Map::pauseMap()
-{
-    pause();
-}
-
-void Map::unpauseMap()
-{
-    unpause();
-}*/
 
 TileMap Map::getMap(){
     return map;
@@ -54,30 +45,35 @@ Player Map::getPlayer(){
     return *myPlayer;
 }
 
+Input Map::getInput(){
+	return *myInput;
+}	
+
 void Map::loadMap(std::string path) {
 
- std::ifstream fichier(path, std::ios::in);
+    tabMap = (int*) std::malloc(832*sizeof(int));
+	ifstream fichier(path, ios::in);
 
         int *adr;
-        adr = tabMab;
+        adr = tabMap;
 
         if(fichier)
         {
         
           while(fichier.eof()!=true){
-            fichier >> *tabMab; 
-            *tabMab = *(tabMab)++;
+            fichier >> *tabMap; 
+            *tabMap = *(tabMap)++;
             }
         
            fichier.close();
         }
 
         else
-           std::cerr << "Impossible d'ouvrir le fichier !" << std::endl;
+           cerr << "Impossible d'ouvrir le fichier !" << endl;
             
-           tabMab = adr;
-        if (!map.load("../res/tileSet.png", sf::Vector2u(32, 32), tabMab, 32, 26))
-            std::cout << "erreur de load"<< std::endl;
+           tabMap = adr;
+        if (!map.load("../res/tileSet.png", Vector2u(32, 32), tabMap, 32, 26))
+            cout << "erreur de load"<< endl;
     
     }
 
@@ -99,9 +95,9 @@ void Map::popMap(int mapID, Map *m) {
         }
     }
 
-int Map::blockedTileID(int x) {
+int Map::autorisedTileID(int x) {
     
-    return tabMab[x];
+    return tabMap[x];
     
 }
 
@@ -113,12 +109,13 @@ int Map::TileNumberConversion(int x,int y)
     return (32*tileNumbery+tileNumberx);
 }
 
+
 bool Map::isEmpty(int x, int y){
-    if( blockedTileID(TileNumberConversion(x, y))==0 ||
-        blockedTileID(TileNumberConversion(x, y))==102 ||
-        blockedTileID(TileNumberConversion(x, y))==111 ||
-        blockedTileID(TileNumberConversion(x, y))==2 ||
-        blockedTileID(TileNumberConversion(x, y))==231)
+    if( autorisedTileID(TileNumberConversion(x, y))==0 ||
+        autorisedTileID(TileNumberConversion(x, y))==102 ||
+        autorisedTileID(TileNumberConversion(x, y))==111 ||
+        autorisedTileID(TileNumberConversion(x, y))==2 ||
+        autorisedTileID(TileNumberConversion(x, y))==231)
     {
         return true;
     }

@@ -1,30 +1,8 @@
-//
-//  CollisionManager.hpp
-//  Final-Mystic-Quest
-//
-//  Created by Sandoche on 01/12/15.
-//  Copyright © 2015 My Organisation Name. All rights reserved.
-//
+#ifndef COLLISIONMANAGER__HPP
+#define COLLISIONMANAGER__HPP
 
-#ifndef CollisionManager_hpp
-#define CollisionManager_hpp
-
-#include <stdio.h>
-#include "Entity.hpp"
-#include "Player.hpp"
+class Player;
 #include "Map.hpp"
+#include "CollisionManager.h"
 
-class CollisionManager
-{
-
-public:
-   
-    static bool collidesWithPlayer(Player *player1, Player *player2);
-    static bool collidesWithMap(Player *player, Map *map);
-    
-private:
-};
-
-
-#endif /* CollisionManager_hpp */
-
+#endif

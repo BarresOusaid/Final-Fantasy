@@ -1,33 +1,13 @@
-#ifndef PLAYER_H
-#define PLAYER_H
+#ifndef PLAYER__HPP
+#define PLAYER__HPP
 
+#include <SFML/Audio.hpp>
+#include <SFML/Graphics.hpp>
+#include <string>
 #include <iostream>
 
-#include "Entity.hpp"
-#include "TileMap.hpp"
-#include "Input.hpp"
+class Map;
 #include "Map.hpp"
+#include "Player.h"
 
-class Map;  
-
-class Player : public TileMap {
-
-public:
-		
-	Player();
-    Player(int i, int j, std::string s);
-	~Player();
-    
-
-    TileMap getTileMap();
-    void moveCharacterSprite(DIRECTION::DIRECTION direct);
-    void moveCharacterSprite_auto(int i);
-    void moveCharacterSprite_IA(Map* map);
-
-private:
-    
-    TileMap characterMap;
-    int tileID[1];
-    
-};
 #endif

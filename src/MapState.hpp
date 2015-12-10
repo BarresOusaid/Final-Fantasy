@@ -1,35 +1,15 @@
-//
-//  MapState.cpp
-//  Final-Mystic-Quest
-//
-//  Created by Sandoche on 03/12/15.
-//  Copyright © 2015 My Organisation Name. All rights reserved.
-//
-#ifndef MAPSTATE_H
-#define MAPSTATE_H
-#include "State.hpp"
-#include "Map.hpp"
+#ifndef MAPSTATE__HPP
+#define MAPSTATE__HPP
 
-/*class Map;
+class Player;
+class Map;
+class MenuState;
+class BattleState;
+#include <SFML/Audio.hpp>
+#include <SFML/Graphics.hpp>
+#include <string>
+#include <iostream>
 
-class MapState:public State {
-    
-public:
-    MapState();
-    ~MapState();
-    
-    void pushMap(Map *map);
-    void popMap();
-    void changeMap(Map *map);
-    
-    
-private:
-    void update();
-    void render();
-    
-    void pause();
-    void unpause();
-    
-    Map *head, *tail;
-};*/
+#include "MapState.h"
+
 #endif
