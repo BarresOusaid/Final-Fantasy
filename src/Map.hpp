@@ -1,10 +1,8 @@
 #ifndef MAP_HPP
 #define MAP_HPP
 
-class Grid;
 class Player;
-class Services;
-
+#include "Player.hpp"
 #include "Map.h"
 
 #endif

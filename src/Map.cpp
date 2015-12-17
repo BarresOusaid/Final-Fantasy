@@ -1,7 +1,3 @@
-#include "Services.hpp"
-#include "Grid.hpp"
-#include "Player.hpp"
-#include "Grid.hpp"
 #include "Map.hpp"
 
 #include <string>
@@ -127,8 +123,4 @@ bool Map::isEmpty(int x, int y){
     else {
         return false;
     }
-}
-
-int* const Map::getTabMap (){
-    return tabMap;
 }
