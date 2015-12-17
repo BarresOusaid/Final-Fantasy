@@ -21,12 +21,15 @@
 #include "Player.hpp"
 #include "TileMap.hpp"
 #include "Map.hpp"
+#include "Grid.hpp"
 #include "Input.hpp"
 #include "CollisionManager.hpp"
+#include "Services.hpp"
 
 using namespace sf;
 using namespace std;
 
+class Grid;
 
 int main(int, char const**)
 {
@@ -42,17 +45,13 @@ int main(int, char const**)
     Input *input = new Input();
 
     Map *map = new Map();
-    /*View view(sf::FloatRect(0, 0, 1000, 800));
-    window.setView(view);*/
+
     while (window.isOpen())
     {	
         map->init(player, input);
         map->popMap(1, map);
         time = clock.getElapsedTime();
-        /*if(time.asSeconds() >= 3)
-        {
-            map -> popMap(2,map);
-        }*/
+
         int xPos, yPos;
         xPos=player->getTileMap().getPosition().x;
         yPos=player->getTileMap().getPosition().y;
@@ -61,22 +60,12 @@ int main(int, char const**)
         {
 			second->moveCharacterSprite_auto(1,2,2);
         } 
-        /*if(((!CollisionManager::collidesWithMap(map))&&(input->downPressed()==1)))
-        {
-			player->moveCharacterSprite_auto(1, 1, 1);
-        }*/  
         
 		if(((!CollisionManager::collidesWithMap(map))))
         {
-			
-				player->moveCharacterSprite_auto(2, 1, 1);
-				
+			player->moveCharacterSprite_auto(2, 1, 1);		
         }      
-        second -> moveCharacterSprite_IA(map);
-        /*if(((!CollisionManager::collidesWithMap(map))&&(input->downPressed()==0)))
-        {
-			player->moveCharacterSprite_auto(1, 1, 1);
-        }*/   
+       //second -> moveCharacterSprite_IA(map);
               
         // Process events
         sf::Event event;

@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/ous/Documents/github/Final-Fantasy/build
 CMakeFiles/execute.dir/all:
 	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/depend
 	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles  1 2 3 4 5 6 7 8 9 10
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12
 	@echo "Built target execute"
 .PHONY : CMakeFiles/execute.dir/all
 
@@ -69,7 +69,7 @@ all: CMakeFiles/execute.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/execute.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/execute.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles 0
 .PHONY : CMakeFiles/execute.dir/rule

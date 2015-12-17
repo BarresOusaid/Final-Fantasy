@@ -7,6 +7,9 @@
 #include <iostream>
 
 class Map;
+class Services;
+
+#include "Grid.hpp"
 #include "Map.hpp"
 #include "Player.h"
 

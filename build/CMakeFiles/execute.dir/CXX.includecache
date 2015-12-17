@@ -80,7 +80,27 @@ iostream
 Entity.h
 /home/ous/Documents/github/Final-Fantasy/src/Entity.h
 
-/home/ous/Documents/github/Final-Fantasy/src/Factory.cpp
+/home/ous/Documents/github/Final-Fantasy/src/Grid.cpp
+Services.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Services.hpp
+Grid.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Grid.hpp
+Player.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Player.hpp
+Grid.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Grid.hpp
+Map.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Map.hpp
+
+/home/ous/Documents/github/Final-Fantasy/src/Grid.h
+DIRECTION.h
+/home/ous/Documents/github/Final-Fantasy/src/DIRECTION.h
+Type.h
+/home/ous/Documents/github/Final-Fantasy/src/Type.h
+
+/home/ous/Documents/github/Final-Fantasy/src/Grid.hpp
+Grid.h
+/home/ous/Documents/github/Final-Fantasy/src/Grid.h
 
 /home/ous/Documents/github/Final-Fantasy/src/Input.cpp
 Input.hpp
@@ -103,6 +123,14 @@ Input.h
 /home/ous/Documents/github/Final-Fantasy/src/Input.h
 
 /home/ous/Documents/github/Final-Fantasy/src/Map.cpp
+Services.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Services.hpp
+Grid.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Grid.hpp
+Player.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Player.hpp
+Grid.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Grid.hpp
 Map.hpp
 /home/ous/Documents/github/Final-Fantasy/src/Map.hpp
 string
@@ -119,8 +147,6 @@ Input.h
 /home/ous/Documents/github/Final-Fantasy/src/Input.h
 
 /home/ous/Documents/github/Final-Fantasy/src/Map.hpp
-Player.hpp
-/home/ous/Documents/github/Final-Fantasy/src/Player.hpp
 Map.h
 /home/ous/Documents/github/Final-Fantasy/src/Map.h
 
@@ -147,18 +173,26 @@ MapState.h
 /home/ous/Documents/github/Final-Fantasy/src/MapState.h
 
 /home/ous/Documents/github/Final-Fantasy/src/Player.cpp
+Services.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Services.hpp
+Grid.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Grid.hpp
 Player.hpp
 /home/ous/Documents/github/Final-Fantasy/src/Player.hpp
+Grid.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Grid.hpp
+Map.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Map.hpp
 
 /home/ous/Documents/github/Final-Fantasy/src/Player.h
 TileMap.h
 /home/ous/Documents/github/Final-Fantasy/src/TileMap.h
 DIRECTION.h
 /home/ous/Documents/github/Final-Fantasy/src/DIRECTION.h
+Services.h
+/home/ous/Documents/github/Final-Fantasy/src/Services.h
 Entity.h
 /home/ous/Documents/github/Final-Fantasy/src/Entity.h
-Map.h
-/home/ous/Documents/github/Final-Fantasy/src/Map.h
 
 /home/ous/Documents/github/Final-Fantasy/src/Player.hpp
 SFML/Audio.hpp
@@ -169,10 +203,40 @@ string
 -
 iostream
 -
+Grid.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Grid.hpp
 Map.hpp
 /home/ous/Documents/github/Final-Fantasy/src/Map.hpp
 Player.h
 /home/ous/Documents/github/Final-Fantasy/src/Player.h
+
+/home/ous/Documents/github/Final-Fantasy/src/Services.cpp
+Services.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Services.hpp
+Grid.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Grid.hpp
+Player.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Player.hpp
+Grid.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Grid.hpp
+Map.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Map.hpp
+
+/home/ous/Documents/github/Final-Fantasy/src/Services.h
+Grid.h
+/home/ous/Documents/github/Final-Fantasy/src/Grid.h
+DIRECTION.h
+/home/ous/Documents/github/Final-Fantasy/src/DIRECTION.h
+Player.h
+/home/ous/Documents/github/Final-Fantasy/src/Player.h
+
+/home/ous/Documents/github/Final-Fantasy/src/Services.hpp
+Grid.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Grid.hpp
+Services.h
+/home/ous/Documents/github/Final-Fantasy/src/Services.h
+vector
+-
 
 /home/ous/Documents/github/Final-Fantasy/src/State.cpp
 State.hpp
@@ -208,6 +272,10 @@ SFML/Graphics.hpp
 Actions.h
 /home/ous/Documents/github/Final-Fantasy/src/Actions.h
 
+/home/ous/Documents/github/Final-Fantasy/src/Type.h
+DIRECTION.h
+/home/ous/Documents/github/Final-Fantasy/src/DIRECTION.h
+
 /home/ous/Documents/github/Final-Fantasy/src/main.cpp
 SFML/Audio.hpp
 -
@@ -223,10 +291,14 @@ TileMap.hpp
 /home/ous/Documents/github/Final-Fantasy/src/TileMap.hpp
 Map.hpp
 /home/ous/Documents/github/Final-Fantasy/src/Map.hpp
+Grid.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Grid.hpp
 Input.hpp
 /home/ous/Documents/github/Final-Fantasy/src/Input.hpp
 CollisionManager.hpp
 /home/ous/Documents/github/Final-Fantasy/src/CollisionManager.hpp
+Services.hpp
+/home/ous/Documents/github/Final-Fantasy/src/Services.hpp
 
 /home/ous/Documents/github/Final-Fantasy/src/textColors.h
 

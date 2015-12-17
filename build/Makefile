@@ -207,6 +207,30 @@ src/Factory.cpp.s:
 	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Factory.cpp.s
 .PHONY : src/Factory.cpp.s
 
+src/Grid.o: src/Grid.cpp.o
+.PHONY : src/Grid.o
+
+# target to build an object file
+src/Grid.cpp.o:
+	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Grid.cpp.o
+.PHONY : src/Grid.cpp.o
+
+src/Grid.i: src/Grid.cpp.i
+.PHONY : src/Grid.i
+
+# target to preprocess a source file
+src/Grid.cpp.i:
+	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Grid.cpp.i
+.PHONY : src/Grid.cpp.i
+
+src/Grid.s: src/Grid.cpp.s
+.PHONY : src/Grid.s
+
+# target to generate assembly for a file
+src/Grid.cpp.s:
+	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Grid.cpp.s
+.PHONY : src/Grid.cpp.s
+
 src/Input.o: src/Input.cpp.o
 .PHONY : src/Input.o
 
@@ -303,6 +327,30 @@ src/Player.cpp.s:
 	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Player.cpp.s
 .PHONY : src/Player.cpp.s
 
+src/Services.o: src/Services.cpp.o
+.PHONY : src/Services.o
+
+# target to build an object file
+src/Services.cpp.o:
+	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Services.cpp.o
+.PHONY : src/Services.cpp.o
+
+src/Services.i: src/Services.cpp.i
+.PHONY : src/Services.i
+
+# target to preprocess a source file
+src/Services.cpp.i:
+	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Services.cpp.i
+.PHONY : src/Services.cpp.i
+
+src/Services.s: src/Services.cpp.s
+.PHONY : src/Services.s
+
+# target to generate assembly for a file
+src/Services.cpp.s:
+	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Services.cpp.s
+.PHONY : src/Services.cpp.s
+
 src/State.o: src/State.cpp.o
 .PHONY : src/State.o
 
@@ -372,6 +420,9 @@ help:
 	@echo "... src/Factory.o"
 	@echo "... src/Factory.i"
 	@echo "... src/Factory.s"
+	@echo "... src/Grid.o"
+	@echo "... src/Grid.i"
+	@echo "... src/Grid.s"
 	@echo "... src/Input.o"
 	@echo "... src/Input.i"
 	@echo "... src/Input.s"
@@ -384,6 +435,9 @@ help:
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"
+	@echo "... src/Services.o"
+	@echo "... src/Services.i"
+	@echo "... src/Services.s"
 	@echo "... src/State.o"
 	@echo "... src/State.i"
 	@echo "... src/State.s"

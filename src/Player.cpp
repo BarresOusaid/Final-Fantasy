@@ -1,5 +1,8 @@
+#include "Services.hpp"
+#include "Grid.hpp"
 #include "Player.hpp"
-
+#include "Grid.hpp"
+#include "Map.hpp"
 
 using namespace sf;
 using namespace std;
@@ -139,21 +142,10 @@ void Player::moveCharacterSprite_auto(int i, int x, int y)
 }
 
 
-
-void Player::moveCharacterSprite_IA(Map* map)
-{
-	if(map->isEmpty(characterMap.getPosition().x, characterMap.getPosition().y))
-	{
-		std::cout <<"mon truc ne  marche pas"<< std::endl;
-        moveCharacterSprite(DIRECTION::GAUCHE); 
-        moveCharacterSprite(DIRECTION::HAUT);
-	}
+/*
+void Player::moveCharacterSprite_IA(Services service){
    
-	std::cout <<"yIA "<< map->getPlayer().getTileMap().getPosition().x<< endl;
-	std::cout <<"xIA "<< map->getPlayer().getTileMap().getPosition().y<< endl;
-	std::cout <<"test de if "<< map->isEmpty(characterMap.getPosition().x, characterMap.getPosition().y) << std::endl;
-   
-}
+}*/
 
 TileMap Player::getTileMap()
 {

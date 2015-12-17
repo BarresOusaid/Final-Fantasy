@@ -3,12 +3,11 @@
 
 #include "TileMap.h"
 #include "DIRECTION.h"
+#include "Services.h"
 #include "Entity.h"
-#include "Map.h"
 
 /// class Player - 
 class Player : public TileMap, public Entity {
-  // Associations
   // Attributes
 private:
   TileMap characterMap;
@@ -21,7 +20,7 @@ public:
   TileMap getTileMap ();
   void moveCharacterSprite (DIRECTION direct);
   void moveCharacterSprite_auto (int i, int x , int y);
-  void moveCharacterSprite_IA (Map* map);
+  void moveCharacterSprite_IA (Services service);
 };
 
 #endif

@@ -95,9 +95,32 @@ CMakeFiles/execute.dir/src/Entity.cpp.o.provides: CMakeFiles/execute.dir/src/Ent
 
 CMakeFiles/execute.dir/src/Entity.cpp.o.provides.build: CMakeFiles/execute.dir/src/Entity.cpp.o
 
+CMakeFiles/execute.dir/src/Grid.cpp.o: CMakeFiles/execute.dir/flags.make
+CMakeFiles/execute.dir/src/Grid.cpp.o: ../src/Grid.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Grid.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Grid.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/Grid.cpp
+
+CMakeFiles/execute.dir/src/Grid.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/execute.dir/src/Grid.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ous/Documents/github/Final-Fantasy/src/Grid.cpp > CMakeFiles/execute.dir/src/Grid.cpp.i
+
+CMakeFiles/execute.dir/src/Grid.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/execute.dir/src/Grid.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ous/Documents/github/Final-Fantasy/src/Grid.cpp -o CMakeFiles/execute.dir/src/Grid.cpp.s
+
+CMakeFiles/execute.dir/src/Grid.cpp.o.requires:
+.PHONY : CMakeFiles/execute.dir/src/Grid.cpp.o.requires
+
+CMakeFiles/execute.dir/src/Grid.cpp.o.provides: CMakeFiles/execute.dir/src/Grid.cpp.o.requires
+	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Grid.cpp.o.provides.build
+.PHONY : CMakeFiles/execute.dir/src/Grid.cpp.o.provides
+
+CMakeFiles/execute.dir/src/Grid.cpp.o.provides.build: CMakeFiles/execute.dir/src/Grid.cpp.o
+
 CMakeFiles/execute.dir/src/Input.cpp.o: CMakeFiles/execute.dir/flags.make
 CMakeFiles/execute.dir/src/Input.cpp.o: ../src/Input.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Input.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Input.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/Input.cpp
 
@@ -118,9 +141,32 @@ CMakeFiles/execute.dir/src/Input.cpp.o.provides: CMakeFiles/execute.dir/src/Inpu
 
 CMakeFiles/execute.dir/src/Input.cpp.o.provides.build: CMakeFiles/execute.dir/src/Input.cpp.o
 
+CMakeFiles/execute.dir/src/Services.cpp.o: CMakeFiles/execute.dir/flags.make
+CMakeFiles/execute.dir/src/Services.cpp.o: ../src/Services.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Services.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Services.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/Services.cpp
+
+CMakeFiles/execute.dir/src/Services.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/execute.dir/src/Services.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ous/Documents/github/Final-Fantasy/src/Services.cpp > CMakeFiles/execute.dir/src/Services.cpp.i
+
+CMakeFiles/execute.dir/src/Services.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/execute.dir/src/Services.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ous/Documents/github/Final-Fantasy/src/Services.cpp -o CMakeFiles/execute.dir/src/Services.cpp.s
+
+CMakeFiles/execute.dir/src/Services.cpp.o.requires:
+.PHONY : CMakeFiles/execute.dir/src/Services.cpp.o.requires
+
+CMakeFiles/execute.dir/src/Services.cpp.o.provides: CMakeFiles/execute.dir/src/Services.cpp.o.requires
+	$(MAKE) -f CMakeFiles/execute.dir/build.make CMakeFiles/execute.dir/src/Services.cpp.o.provides.build
+.PHONY : CMakeFiles/execute.dir/src/Services.cpp.o.provides
+
+CMakeFiles/execute.dir/src/Services.cpp.o.provides.build: CMakeFiles/execute.dir/src/Services.cpp.o
+
 CMakeFiles/execute.dir/src/CollisionManager.cpp.o: CMakeFiles/execute.dir/flags.make
 CMakeFiles/execute.dir/src/CollisionManager.cpp.o: ../src/CollisionManager.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/CollisionManager.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/CollisionManager.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/CollisionManager.cpp
 
@@ -143,7 +189,7 @@ CMakeFiles/execute.dir/src/CollisionManager.cpp.o.provides.build: CMakeFiles/exe
 
 CMakeFiles/execute.dir/src/Player.cpp.o: CMakeFiles/execute.dir/flags.make
 CMakeFiles/execute.dir/src/Player.cpp.o: ../src/Player.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Player.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Player.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/Player.cpp
 
@@ -166,7 +212,7 @@ CMakeFiles/execute.dir/src/Player.cpp.o.provides.build: CMakeFiles/execute.dir/s
 
 CMakeFiles/execute.dir/src/MapState.cpp.o: CMakeFiles/execute.dir/flags.make
 CMakeFiles/execute.dir/src/MapState.cpp.o: ../src/MapState.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/MapState.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/MapState.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/MapState.cpp
 
@@ -189,7 +235,7 @@ CMakeFiles/execute.dir/src/MapState.cpp.o.provides.build: CMakeFiles/execute.dir
 
 CMakeFiles/execute.dir/src/Enemy.cpp.o: CMakeFiles/execute.dir/flags.make
 CMakeFiles/execute.dir/src/Enemy.cpp.o: ../src/Enemy.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Enemy.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Enemy.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/Enemy.cpp
 
@@ -212,7 +258,7 @@ CMakeFiles/execute.dir/src/Enemy.cpp.o.provides.build: CMakeFiles/execute.dir/sr
 
 CMakeFiles/execute.dir/src/Map.cpp.o: CMakeFiles/execute.dir/flags.make
 CMakeFiles/execute.dir/src/Map.cpp.o: ../src/Map.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Map.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Map.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/Map.cpp
 
@@ -235,7 +281,7 @@ CMakeFiles/execute.dir/src/Map.cpp.o.provides.build: CMakeFiles/execute.dir/src/
 
 CMakeFiles/execute.dir/src/Factory.cpp.o: CMakeFiles/execute.dir/flags.make
 CMakeFiles/execute.dir/src/Factory.cpp.o: ../src/Factory.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/Factory.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/Factory.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/Factory.cpp
 
@@ -258,7 +304,7 @@ CMakeFiles/execute.dir/src/Factory.cpp.o.provides.build: CMakeFiles/execute.dir/
 
 CMakeFiles/execute.dir/src/State.cpp.o: CMakeFiles/execute.dir/flags.make
 CMakeFiles/execute.dir/src/State.cpp.o: ../src/State.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ous/Documents/github/Final-Fantasy/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/execute.dir/src/State.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/execute.dir/src/State.cpp.o -c /home/ous/Documents/github/Final-Fantasy/src/State.cpp
 
@@ -283,7 +329,9 @@ CMakeFiles/execute.dir/src/State.cpp.o.provides.build: CMakeFiles/execute.dir/sr
 execute_OBJECTS = \
 "CMakeFiles/execute.dir/src/main.cpp.o" \
 "CMakeFiles/execute.dir/src/Entity.cpp.o" \
+"CMakeFiles/execute.dir/src/Grid.cpp.o" \
 "CMakeFiles/execute.dir/src/Input.cpp.o" \
+"CMakeFiles/execute.dir/src/Services.cpp.o" \
 "CMakeFiles/execute.dir/src/CollisionManager.cpp.o" \
 "CMakeFiles/execute.dir/src/Player.cpp.o" \
 "CMakeFiles/execute.dir/src/MapState.cpp.o" \
@@ -297,7 +345,9 @@ execute_EXTERNAL_OBJECTS =
 
 ../bin/execute: CMakeFiles/execute.dir/src/main.cpp.o
 ../bin/execute: CMakeFiles/execute.dir/src/Entity.cpp.o
+../bin/execute: CMakeFiles/execute.dir/src/Grid.cpp.o
 ../bin/execute: CMakeFiles/execute.dir/src/Input.cpp.o
+../bin/execute: CMakeFiles/execute.dir/src/Services.cpp.o
 ../bin/execute: CMakeFiles/execute.dir/src/CollisionManager.cpp.o
 ../bin/execute: CMakeFiles/execute.dir/src/Player.cpp.o
 ../bin/execute: CMakeFiles/execute.dir/src/MapState.cpp.o
@@ -320,7 +370,9 @@ CMakeFiles/execute.dir/build: ../bin/execute
 
 CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/main.cpp.o.requires
 CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/Entity.cpp.o.requires
+CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/Grid.cpp.o.requires
 CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/Input.cpp.o.requires
+CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/Services.cpp.o.requires
 CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/CollisionManager.cpp.o.requires
 CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/Player.cpp.o.requires
 CMakeFiles/execute.dir/requires: CMakeFiles/execute.dir/src/MapState.cpp.o.requires

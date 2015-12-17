@@ -30,6 +30,7 @@ public:
   Player getPlayer ();
   Input getInput ();
   void popMap (int mapID, Map* m);
+  int* const getTabMap ();
   Map* getNext ();
   Map* getPrev ();
   void setNext (Map* map);
