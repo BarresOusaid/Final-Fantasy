@@ -1,4 +1,3 @@
-
 //
 // Disclamer:
 // ----------
@@ -28,12 +27,19 @@
 using namespace sf;
 using namespace std;
 
-
 Event event;
+
 Player *player = new Player();
+Player *second = new Player(2,2,"Hero");
+
 Input *input = new Input();
+
 Map *map_1 = new Map();
 
+RenderWindow window(sf::VideoMode(1025, 800, 32), "SFML window", Style::Default);
+
+/****************** Il s'agit du thread se chargeant d'une partie du moteur du jeu(mouvement du personnage principal) ***************/
+/**********************************************************************************/
 void character_movement(void)
 {
     input->pollInput(event);
@@ -42,81 +48,82 @@ void character_movement(void)
         player->moveCharacterSprite(input->getDirection());
     }
 }
+/**********************************************************************************/
+/**********************************************************************************/
+
+/****************** Il s'agit du thread se chargeant d'une partie du moteur du jeu(collision et IA) ***************/
+/**********************************************************************************/
+void collision_render(void)
+{
+    map_1->init(player, input);
+    map_1->popMap(1, map_1);
+    int xPos, yPos;
+    xPos=player->getTileMap().getPosition().x;
+    yPos=player->getTileMap().getPosition().y;
+    
+    if(CollisionManager::collidesWithPlayer(player, second)==1)
+    {
+        second->moveCharacterSprite_auto(1,2,2);
+    }
+    
+    if(((!CollisionManager::collidesWithMap(map_1))))
+    {
+        player->moveCharacterSprite_auto(2, 1, 1);
+    }
+    //second -> moveCharacterSprite_IA(map_1);
+}
+/**********************************************************************************/
+/**********************************************************************************/
+
+
+/****************** Il s'agit du thread se chargeant de l'affichage ***************/
+/**********************************************************************************/
+void render(void)
+{
+        
+    // Clear screen
+    window.clear();
+        
+    // Draw the sprite
+    window.draw(map_1->getMap());
+        
+    // Draw the string
+    window.draw(player->getTileMap());
+    window.draw(second->getTileMap());
+        
+    // Update the window
+    window.display();
+}
+/**********************************************************************************/
+/**********************************************************************************/
+
 
 int main(int, char const**)
 {
-    
-    RenderWindow window(sf::VideoMode(1025, 800, 32), "SFML window", Style::Default);
-    
+        
     Time time;
     
     Clock clock;
-    //Player *player = new Player();
-    Player *second = new Player(2,2,"Hero");
     
-    //Input *input = new Input();
-    /*thread t(character_movement);
-    t.join();*/
-    
-    //Map *map = new Map();
-    /*View view(sf::FloatRect(0, 0, 1000, 800));
-    window.setView(view);*/
     while (window.isOpen())
-    {	
-        map_1->init(player, input);
-        map_1->popMap(1, map_1);
-        time = clock.getElapsedTime();
-        int xPos, yPos;
-        xPos=player->getTileMap().getPosition().x;
-        yPos=player->getTileMap().getPosition().y;
-      
-        if(CollisionManager::collidesWithPlayer(player, second)==1)
-        {
-			second->moveCharacterSprite_auto(1,2,2);
-        }
+    {
+        thread moteur_jeu_1(collision_render);
+        moteur_jeu_1.join();
         
-		if(((!CollisionManager::collidesWithMap(map_1))))
-        {
-            player->moveCharacterSprite_auto(2, 1, 1);
-        }      
-        //second -> moveCharacterSprite_IA(map_1);
-        /*if(((!CollisionManager::collidesWithMap(map))&&(input->downPressed()==0)))
-        {
-			player->moveCharacterSprite_auto(1, 1, 1);
-        }*/   
-              
         // Process events
-        //sf::Event event;
         while (window.pollEvent(event))
         {
-            /*input->pollInput(event);
-            if(CollisionManager::collidesWithMap(map_1))
-            {
-                player->moveCharacterSprite(input->getDirection());
-            }*/
-            
+            thread moteur_jeu_2(character_movement);
+            moteur_jeu_2.join();
             if(event.type == Event::Closed)
             {
                 window.close();
             }
-            thread t(character_movement);
-            t.join();
         }
         
-        // Clear screen
-        window.clear();
-        
-        // Draw the sprite
-        window.draw(map_1->getMap());
-        
-        // Draw the string
-        window.draw(player->getTileMap());
-        window.draw(second->getTileMap());
-
-        // Update the window
-        window.display();
+        thread rendu(render);
+        rendu.join();
         
     }
-    
     return EXIT_SUCCESS;
 }
