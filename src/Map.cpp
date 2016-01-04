@@ -6,6 +6,19 @@
 using namespace std;
 using namespace sf;
 
+/* -----------------------ERREUR-------------------------
+Ereur a corriger dans setMetaData la ligne tiles[x][y] = metaData[id]; */
+
+
+//********************ce qu'il faut faire************************
+/*il faut deja que je cree une grille cad un tableau 2D qui me permettra de faire en sorte d'avoir un tableau
+exploitable et puis le remplir avec le tablea tabMap ici il faut que j'initialise t[][] pour que ca marche
+voila voila */
+
+
+//*********************ce qui est fait*******************************
+  /*je suis entrain de realiser l'IA mais jai un probleme de erreur de segmen donc le probleme vient de tiles 
+  qui represete ma grille pour le moment mais elle est vide c'est pour cela cette merde ne marche pas*/
 
 Map::Map() {
     
@@ -14,6 +27,7 @@ Map::Map() {
     next=0;
     prev=0;
     tiles=0;
+    metaData =  new int [mapHeight*mapWidth];
 
 }
 
@@ -35,6 +49,9 @@ void Map::init(Player *player, Input *input){
     //map.setScale(2, 2);
 }
 
+int* const Map::getTabMap (){
+    return tabMap;
+}
 
 
 TileMap Map::getMap(){
@@ -111,6 +128,7 @@ int Map::TileNumberConversion(int x,int y)
 
 
 bool Map::isEmpty(int x, int y){
+   
     if( autorisedTileID(TileNumberConversion(x, y))==0 ||
         autorisedTileID(TileNumberConversion(x, y))==102 ||
         autorisedTileID(TileNumberConversion(x, y))==111 ||
@@ -124,3 +142,59 @@ bool Map::isEmpty(int x, int y){
         return false;
     }
 }
+
+  int const Map::getWidth (){
+    return mapWidth;
+  }
+
+  int const Map::getHeight (){
+    return mapHeight;
+  }
+
+  bool const Map::isValid (int x, int y, DIRECTION d){
+    if (x < mapHeight && y < mapWidth){
+        return true;
+    }
+    else 
+        return false;
+  }
+
+  bool const Map::updateCoords (int& x, int& y, DIRECTION d){
+    if (x < mapHeight && y < mapWidth){
+      this -> x = x;
+      this -> y = y;
+        return true;
+    }
+    else 
+        return false;
+  }
+
+  Type const Map::getType (int x, int y, DIRECTION d){
+    if (isValid(x,y,d)){
+           if (isEmpty(32*x,32*y)){
+              return EmptySpace;
+           }
+
+           else {
+            return FullSpace;
+          }
+    }
+    else return Invalid;
+  }
+  
+  void Map::initMetaData (int id, int value){
+    //metaData[mapHeight*mapWidth];
+    for (int i = 0; i < mapHeight*mapWidth; ++i)
+    {
+      metaData[i] = value;
+    }
+  }
+
+  int const Map::getMetaData (int x, int y, int id, DIRECTION d){
+    metaData[id] = autorisedTileID(TileNumberConversion(x, y));
+    return metaData[id]; 
+  }
+
+  void Map::setMetaData (int x, int y, int id, int value, DIRECTION d){
+     metaData[id] = value;
+  }

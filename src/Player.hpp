@@ -9,8 +9,8 @@
 class Map;
 class Services;
 
-#include "Grid.hpp"
 #include "Map.hpp"
+#include "Services.hpp"
 #include "Player.h"
 
 #endif

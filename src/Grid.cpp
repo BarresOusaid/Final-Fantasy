@@ -1,14 +1,14 @@
-#include "Services.hpp"
+/*
 #include "Grid.hpp"
-#include "Player.hpp"
-#include "Grid.hpp"
-#include "Map.hpp"
 
-  Grid::Grid (int* tabMap){
-  
+  Grid::Grid (){
+    
+    mapGrid = new Map();
+    int * tabMap = mapGrid->getTabMap ();
+
   	for (int i = 0; i < height; ++i){
   		for (int j = 0; j < width; ++j){
-  			grid[i][j] = tabMap[(width*j)+i];
+  			grid[i][j] = tabMap[i];
   		}
   	}
   }
@@ -70,3 +70,4 @@
      metaData[id] = value;
      grid[x][y] = metaData[id]; 
   }
+*/

@@ -30,7 +30,7 @@ using namespace std;
 Event event;
 
 Player *player = new Player();
-Player *second = new Player(2,2,"Hero");
+Player *second = new Player(1,1,"Hero");
 
 Input *input = new Input();
 
@@ -70,7 +70,7 @@ void collision_render(void)
     {
         player->moveCharacterSprite_auto(2, 1, 1);
     }
-    //second -> moveCharacterSprite_IA(map_1);
+    second -> moveCharacterSprite_IA(map_1);
 }
 /**********************************************************************************/
 /**********************************************************************************/

@@ -1,8 +1,6 @@
-#include "Services.hpp"
-#include "Grid.hpp"
 #include "Player.hpp"
-#include "Grid.hpp"
-#include "Map.hpp"
+
+class Services;
 
 using namespace sf;
 using namespace std;
@@ -142,15 +140,26 @@ void Player::moveCharacterSprite_auto(int i, int x, int y)
 }
 
 
-/*
-void Player::moveCharacterSprite_IA(Services service){
+void Player::moveCharacterSprite_IA (Map* map){
    
-}*/
+	//on calcul une carde de distance pour un joueur qui se trouve dans les coordonéées (x,y) sur la metadonnee id
+   	service = new Services(map);
+   	service->ford (this->characterMap.getPosition().x, this->characterMap.getPosition().y, 1);
+
+}
 
 TileMap Player::getTileMap()
 {
     return characterMap;
 }
+
+  int Player::getX(){
+  	getTileMap().getPosition().x;
+  }
+
+  int Player::getY(){
+  	getTileMap().getPosition().y;	
+  }
 
 /*Input Player::getInput()
 {
