@@ -8,10 +8,6 @@
 
 /home/ous/Documents/github/Final-Fantasy/src/Actions.h
 
-/home/ous/Documents/github/Final-Fantasy/src/CollisionManager.cpp
-CollisionManager.hpp
-/home/ous/Documents/github/Final-Fantasy/src/CollisionManager.hpp
-
 /home/ous/Documents/github/Final-Fantasy/src/CollisionManager.h
 Map.h
 /home/ous/Documents/github/Final-Fantasy/src/Map.h
@@ -84,10 +80,6 @@ Player.hpp
 Map.hpp
 /home/ous/Documents/github/Final-Fantasy/src/Map.hpp
 
-/home/ous/Documents/github/Final-Fantasy/src/Player.cpp
-Player.hpp
-/home/ous/Documents/github/Final-Fantasy/src/Player.hpp
-
 /home/ous/Documents/github/Final-Fantasy/src/Player.h
 TileMap.h
 /home/ous/Documents/github/Final-Fantasy/src/TileMap.h
@@ -114,10 +106,6 @@ Services.hpp
 Player.h
 /home/ous/Documents/github/Final-Fantasy/src/Player.h
 
-/home/ous/Documents/github/Final-Fantasy/src/Services.cpp
-Services.hpp
-/home/ous/Documents/github/Final-Fantasy/src/Services.hpp
-
 /home/ous/Documents/github/Final-Fantasy/src/Services.h
 DIRECTION.h
 /home/ous/Documents/github/Final-Fantasy/src/DIRECTION.h
@@ -133,22 +121,6 @@ vector
 -
 iostream
 -
-
-/home/ous/Documents/github/Final-Fantasy/src/State.cpp
-State.hpp
-/home/ous/Documents/github/Final-Fantasy/src/State.hpp
-
-/home/ous/Documents/github/Final-Fantasy/src/State.h
-Input.h
-/home/ous/Documents/github/Final-Fantasy/src/Input.h
-
-/home/ous/Documents/github/Final-Fantasy/src/State.hpp
-Input.hpp
-/home/ous/Documents/github/Final-Fantasy/src/Input.hpp
-Map.hpp
-/home/ous/Documents/github/Final-Fantasy/src/Map.hpp
-State.h
-/home/ous/Documents/github/Final-Fantasy/src/State.h
 
 /home/ous/Documents/github/Final-Fantasy/src/Stats.h
 
@@ -192,6 +164,8 @@ Input.hpp
 CollisionManager.hpp
 /home/ous/Documents/github/Final-Fantasy/src/CollisionManager.hpp
 thread
+-
+new
 -
 
 /home/ous/Documents/github/Final-Fantasy/src/textColors.h

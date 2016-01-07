@@ -23,6 +23,7 @@
 #include "Input.hpp"
 #include "CollisionManager.hpp"
 #include <thread>
+#include <new> 
 
 using namespace sf;
 using namespace std;
@@ -55,8 +56,6 @@ void character_movement(void)
 /**********************************************************************************/
 void collision_render(void)
 {
-    map_1->init(player, input);
-    map_1->popMap(1, map_1);
     int xPos, yPos;
     xPos=player->getTileMap().getPosition().x;
     yPos=player->getTileMap().getPosition().y;
@@ -100,11 +99,15 @@ void render(void)
 
 int main(int, char const**)
 {
-        
+   
+ try
+  {
     Time time;
-    
     Clock clock;
-    
+
+    map_1->init(player, input);
+    map_1->popMap(1, map_1);
+
     while (window.isOpen())
     {
         thread moteur_jeu_1(collision_render);
@@ -123,7 +126,13 @@ int main(int, char const**)
         
         thread rendu(render);
         rendu.join();
-        
-    }
-    return EXIT_SUCCESS;
+  }
+}
+
+  catch (std::bad_alloc& ba)
+  {
+    std::cerr << "bad_alloc caught: " << ba.what() << '\n';
+  }
+
+  return 0;
 }

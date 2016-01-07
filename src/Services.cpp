@@ -61,8 +61,13 @@
       int a = map->getMetaData(x,y,id);
       int b = map->getMetaData(x,y,id,d);
 
+      /*****************tache pour demain
       /*il faut que je mette en oeuvre la direction car tous marche mais le b il faut le mettre en ouevre 
       grace a Coords voila voila*/
+
+
+
+
       
       std::cout << "relax: "<< std::endl;
       if ((a+1)< b){

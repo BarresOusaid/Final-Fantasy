@@ -41,6 +41,7 @@ Map::~Map() {
         delete[] tiles;
         tiles = 0;
     }
+    delete[] tabMap;
 }
 
 void Map::init(Player *player, Input *input){
