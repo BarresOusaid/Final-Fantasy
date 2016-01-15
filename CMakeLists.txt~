@@ -26,7 +26,7 @@ set(SFML_ROOT "/usr/lsa")
 set(CMAKE_MODULE_PATH "${SFML_ROOT}/share/SFML/cmake/Modules"
 ${CMAKE_MODULE_PATH})
 
-find_package(SFML 2 COMPONENTS system window graphics audio REQUIRED)
+find_package(SFML 2 COMPONENTS system window graphics audio network REQUIRED)
 include_directories(${SFML_INCLUDE_DIR})
 
 add_executable(
